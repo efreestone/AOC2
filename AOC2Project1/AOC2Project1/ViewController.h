@@ -15,4 +15,9 @@
 
 @interface ViewController : UIViewController
 
+//Declare labels
+{
+    UILabel *guitarLabel;
+}
+
 @end

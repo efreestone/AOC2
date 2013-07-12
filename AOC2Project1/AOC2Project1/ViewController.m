@@ -22,6 +22,16 @@
 
 - (void)viewDidLoad
 {
+    // Creating default text label
+    guitarLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 30.0f)];
+    if (guitarLabel != nil){
+        guitarLabel.backgroundColor = [UIColor whiteColor];
+        guitarLabel.textColor = [UIColor blackColor];
+        guitarLabel.textAlignment = NSTextAlignmentCenter;
+        guitarLabel.text = @"Guitar Factory";
+        [self.view addSubview:guitarLabel];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

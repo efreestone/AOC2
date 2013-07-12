@@ -1,3 +1,8 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 1
+// July 9th, 2013
+
 //
 //  SchecterGuitar.m
 //  AOC2Project1
