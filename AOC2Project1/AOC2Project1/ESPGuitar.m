@@ -1,8 +1,3 @@
-// Elijah Freestone
-// AOC2 1307
-// Project 1
-// July 9th, 2013
-
 //
 //  ESPGuitar.m
 //  AOC2Project1
