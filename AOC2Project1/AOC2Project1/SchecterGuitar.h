@@ -11,8 +11,15 @@
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseGuitar.h"
 
-@interface SchecterGuitar : NSObject
+@interface SchecterGuitar : BaseGuitar
+
+//Declare unique data memeber to represent number of strings on the guitar, number of frets and total number of notes
+@property int numberOfStrings;
+
+@property int numberOfFrets;
+
+@property int numberOfNotes;
 
 @end

@@ -11,8 +11,23 @@
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseGuitar.h"
 
-@interface ESPGuitar : NSObject
+@interface ESPGuitar : BaseGuitar
+{
+    int guitarTop;
+}
+
+//Assign enum to the differnt types of maple guitar tops
+typedef enum {
+    QUILTMAPLE,
+    FLAMEMAPLE,
+    PLAINMAPLE
+} guitarTop;
+
+//Unique data members for top material of guitar and value added by the guitar top
+@property int topMaterial;
+
+@property float valueAdded;
 
 @end
