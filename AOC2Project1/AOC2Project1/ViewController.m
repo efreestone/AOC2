@@ -106,7 +106,7 @@
         [newSchecter setGuitarYear:2008];
         [newSchecter setGuitarModel:@"Damien-7"];
         [newSchecter setGuitarCondition:0.85f];
-        [newSchecter setOriginalValue:600];
+        [newSchecter setOriginalValue:500];
         [newSchecter calcGuitarValue:[newSchecter numberOfFrets]];
         //NSLog(@"%d", [newSchecter numberOfNotes]);
     }

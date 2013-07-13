@@ -34,15 +34,15 @@
     if (topMaterial == QUILTMAPLE) {
         [self setOriginalValue:1350];
         [self setValueAdded:(self.originalValue * 0.15f)];
-        NSLog(@"The added value of the top is %f", valueAdded);
+        //NSLog(@"The added value of the top is %f", valueAdded);
     } else if (topMaterial == FLAMEMAPLE) {
         [self setOriginalValue:1200];
         [self setValueAdded:(self.originalValue * 0.10f)];
-        NSLog(@"The added value of the top is %f", valueAdded);
+        //NSLog(@"The added value of the top is %f", valueAdded);
     } else if (topMaterial == PLAINMAPLE) {
         [self setOriginalValue:1050];
         [self setValueAdded:(self.originalValue * 0.05f)];
-        NSLog(@"The added value of the top is %f", valueAdded);
+        //NSLog(@"The added value of the top is %f", valueAdded);
     } else {
         NSLog(@"The guitar doesn't have a maple top so there is no added value");
     }
