@@ -28,7 +28,7 @@
         [self setOriginalValue:0];
     }
     return self;
-}
+};
 
 //Calculation/manipulation method to determine value of guitar
 -(void)calcGuitarValue { //: (int) addedValue 

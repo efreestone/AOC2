@@ -27,6 +27,13 @@
         [self setYearsOwned:10];
     }
     return self;
+};
+
+//Override base guitar value calculation to factor in unique data members
+-(void)calcGuitarValue { //: (int) addedValue
+    [self setOriginalValue:(numberMade / yearsOwned)];
+    NSLog(@"The guitars original value is $%d", self.originalValue);
 }
+
 
 @end

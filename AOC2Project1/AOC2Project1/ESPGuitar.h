@@ -14,5 +14,17 @@
 #import "BaseGuitar.h"
 
 @interface ESPGuitar : BaseGuitar
+{
+    int guitarTop;
+}
+
+typedef enum {
+    QUILTMAPLE,
+    FLAMEMAPLE,
+    PLAINMAPLE
+} guitarTop;
+
+@property int topMaterial;
+@property int valueAdded;
 
 @end
