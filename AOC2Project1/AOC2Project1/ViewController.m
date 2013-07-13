@@ -32,6 +32,7 @@
         [self.view addSubview:guitarLabel];
     }
     
+    //Create isntance of BCRichGuitar class
     BCRichGuitar *newBCRich = (BCRichGuitar*)[GuitarFactory createNewGuitar:BCRICH];
     if (newBCRich != nil) {
         [newBCRich setGuitarYear:2003];
@@ -50,7 +51,7 @@
         bcrichLabel1.textColor = [UIColor blackColor];
         bcrichLabel1.textAlignment = NSTextAlignmentCenter;
         bcrichLabel1.numberOfLines = 2;
-        bcrichLabel1.text = [NSString stringWithFormat:@"The %d BC Rich %@ is in %.2f condition. Original value is $%d.", [newBCRich guitarYear],[newBCRich guitarModel], [newBCRich guitarCondition], [newBCRich originalValue]];
+        bcrichLabel1.text = [NSString stringWithFormat:@"My %d BC Rich %@ is in %.2f condition. Original value is $%d.", [newBCRich guitarYear],[newBCRich guitarModel], [newBCRich guitarCondition], [newBCRich originalValue]];
         [self.view addSubview:bcrichLabel1];
     }
     
@@ -64,6 +65,39 @@
         bcrichLabel2.text = [NSString stringWithFormat:@"Because it is rare, it's currently valued at $%d after %d years of ownership.", [newBCRich increasedValue], [newBCRich yearsOwned]];
         [self.view addSubview:bcrichLabel2];
         //NSLog(@"%d", [newBCRich increasedValue]);
+    }
+    
+    //Create an instance of ESPGuitar class
+    ESPGuitar *newESP = (ESPGuitar*)[GuitarFactory createNewGuitar:ESP];
+    if (newESP != nil) {
+        [newESP setGuitarYear:2010];
+        [newESP setGuitarModel:@"LTD H-1001FM"];
+        [newESP setGuitarCondition:0.95f];
+        [newESP setOriginalValue:1000];
+        [newESP setTopMaterial:FLAMEMAPLE];
+        [newESP calcGuitarValue:[newESP guitarCondition]];
+    }
+    
+    //Create ESP Static label
+    espLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 160.0f, 300.0f, 50.0f)];
+    if (espLabel1 != nil) {
+        espLabel1.backgroundColor = [UIColor whiteColor];
+        espLabel1.textColor = [UIColor blackColor];
+        espLabel1.textAlignment = NSTextAlignmentCenter;
+        espLabel1.numberOfLines = 2;
+        espLabel1.text = [NSString stringWithFormat:@"My %d ESP %@ is in %.2f condition. Original value is $%d.", [newESP guitarYear], [newESP guitarModel], [newESP guitarCondition], [newESP originalValue]];
+        [self.view addSubview:espLabel1];
+    }
+    
+    //Create ESP Dynamic label
+    espLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 220.0f, 300.0f, 50.0f)];
+    if (espLabel2 != nil) {
+        espLabel2.backgroundColor = [UIColor whiteColor];
+        espLabel2.textColor = [UIColor blackColor];
+        espLabel2.textAlignment = NSTextAlignmentCenter;
+        espLabel2.numberOfLines = 2;
+        espLabel2.text = [NSString stringWithFormat:@"The Flamed Maple top adds $%.2f to the value of the guitar.", [newESP valueAdded]];
+        [self.view addSubview:espLabel2];
     }
     
     [super viewDidLoad];

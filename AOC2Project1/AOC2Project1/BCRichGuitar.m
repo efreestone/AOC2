@@ -29,18 +29,9 @@
 };
 
 //Override base guitar value calculation to factor in unique data members
--(void)calcGuitarValue: (float) addedValue { //
+-(void)calcGuitarValue: (float) addedValue {
     [self setIncreasedValue:((self.numberMade / self.yearsOwned) + self.originalValue)];
-    //int newAddedValue = self.originalValue;
-    NSLog(@"The guitar is currently valued at $%d", self.increasedValue);
-    //return newAddedValue;
+    //NSLog(@"The guitar is currently valued at $%d", self.increasedValue);
 }
-
-/*-(void)calcGuitarValue: (float) addedValue {
-    [self setIncreasedValue:(self.originalValue / guitarCondition)];
-    NSLog(@"The guitars original value is $%d", originalValue);
-    //return newAddedValue;
-}*/
-
 
 @end

@@ -24,13 +24,13 @@
         [self setOriginalValue:0];
         [self setTopMaterial:QUILTMAPLE];
         [self setValueAdded:0.00f];
-        NSLog(@"yay it worked!!");
+        //NSLog(@"yay it worked!!");
     }
     return self;
 }
 
 //Overridding calculation to factor in guitar top material in value
--(void)calcGuitarValue {
+-(void)calcGuitarValue: (float) addedValue {
     if (topMaterial == QUILTMAPLE) {
         [self setOriginalValue:1350];
         [self setValueAdded:(self.originalValue * 0.15f)];
