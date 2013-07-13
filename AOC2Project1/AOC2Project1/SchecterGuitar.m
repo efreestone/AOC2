@@ -29,7 +29,7 @@
 //Override base guitar value calculation to factor in unique data members
 -(void)calcGuitarValue: (float) addedValue {
     [self setNumberOfNotes:(self.numberOfStrings * self.numberOfFrets)];
-    //NSLog(@"The guitar is currently valued at $%d", self.numberOfNotes);
+    NSLog(@"The guitar has %d available notes", self.numberOfNotes);
 }
 
 @end

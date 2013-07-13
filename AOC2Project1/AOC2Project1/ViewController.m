@@ -122,6 +122,17 @@
         [self.view addSubview:schecterLabel1];
     }
     
+    //Create Schecter Dynamic label
+    schecterLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 50.0f)];
+    if (schecterLabel2 != nil) {
+        schecterLabel2.backgroundColor = [UIColor whiteColor];
+        schecterLabel2.textColor = [UIColor blackColor];
+        schecterLabel2.textAlignment = NSTextAlignmentCenter;
+        schecterLabel2.numberOfLines = 2;
+        schecterLabel2.text = [NSString stringWithFormat:@"Because it has %d strings and %d frets, there are %d notes on the fretboard.", [newSchecter numberOfStrings], [newSchecter numberOfFrets], [newSchecter numberOfNotes]];
+        [self.view addSubview:schecterLabel2];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
