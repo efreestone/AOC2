@@ -19,7 +19,7 @@
 
 //Declare labels
 {
-    UILabel *guitarLabel, *bcrichLabel, *espLabel, *schecterLabel;
+    UILabel *guitarLabel, *bcrichLabel1, *bcrichLabel2, *espLabel, *schecterLabel;
 }
 
 @end

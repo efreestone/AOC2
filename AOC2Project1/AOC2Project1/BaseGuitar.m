@@ -24,15 +24,19 @@
     if (self != nil) {
         [self setGuitarYear:0];
         [self setGuitarModel:nil];
-        [self setGuitarCondition:nil];
+        //Set guitar condition. 1.0 = perfect. 0.50 = worn but functional. 0.00 = non-functional
+        [self setGuitarCondition:0.00f];
         [self setOriginalValue:0];
+        [self setIncreasedValue:0];
     }
     return self;
 };
 
 //Calculation/manipulation method to determine value of guitar
--(void)calcGuitarValue { //: (int) addedValue 
-    NSLog(@"The guitars original value is $%d", originalValue);
+-(void)calcGuitarValue: (float) addedValue {
+    [self setIncreasedValue:(self.originalValue / self.guitarCondition)];
+    NSLog(@"The guitars original value is $%d", self.increasedValue);
+    //return newAddedValue;
 }
 
 /*{

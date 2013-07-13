@@ -30,9 +30,11 @@ typedef enum {
 
 @property (copy) NSString *guitarModel;
 
-@property (copy) NSString *guitarCondition;
+@property float guitarCondition;
 
 @property int originalValue;
+
+@property int increasedValue;
 
 //Methods
 
@@ -40,6 +42,6 @@ typedef enum {
 -(id)init;
 
 //Calculation/manipulation method to determine value of guitar
--(void)calcGuitarValue;
+-(void)calcGuitarValue: (float) addedValue;
 
 @end
