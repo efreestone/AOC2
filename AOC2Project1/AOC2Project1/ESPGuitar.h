@@ -24,7 +24,9 @@ typedef enum {
     PLAINMAPLE
 } guitarTop;
 
+//Unique data members for top material of guitar and value added by the guitar top
 @property int topMaterial;
-@property int valueAdded;
+
+@property float valueAdded;
 
 @end

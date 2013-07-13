@@ -12,6 +12,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import factory class
+#import "GuitarFactory.h"
 
 @interface ViewController : UIViewController
 
