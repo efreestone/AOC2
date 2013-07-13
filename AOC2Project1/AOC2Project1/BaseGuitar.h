@@ -28,9 +28,9 @@ typedef enum {
 //Data members for year (int), guitar model (string), guitar condition (string), and original value (int) 
 @property int guitarYear;
 
-@property NSString *guitarModel;
+@property (copy) NSString *guitarModel;
 
-@property NSString *guitarCondition;
+@property (copy) NSString *guitarCondition;
 
 @property int originalValue;
 

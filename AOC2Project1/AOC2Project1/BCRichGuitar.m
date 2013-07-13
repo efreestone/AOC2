@@ -22,7 +22,6 @@
 -(id)init {
     self = [super init];
     if (self != nil) {
-        [self setOriginalValue:300];
         [self setNumberMade:3000];
         [self setYearsOwned:10];
     }
