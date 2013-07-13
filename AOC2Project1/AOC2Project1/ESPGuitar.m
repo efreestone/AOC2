@@ -30,7 +30,7 @@
     return self;
 }
 
-//Overridding calculation to factor in guitar top material in value
+//Overridding calculation to factor in guitar top material in value. This displays the added value of the top instead of the total value of the guitar.
 -(void)calcGuitarValue: (float) addedValue {
     if (topMaterial == QUILTMAPLE) {
         [self setOriginalValue:1350];

@@ -29,7 +29,7 @@
     return self;
 };
 
-//Override base guitar value calculation to factor in unique data members
+//Override base guitar value calculation to factor in unique data members. This will display number of notes available instead of value of the guitar
 -(void)calcGuitarValue: (float) addedValue {
     [self setNumberOfNotes:(self.numberOfStrings * self.numberOfFrets)];
     //NSLog(@"The guitar has %d available notes", self.numberOfNotes);

@@ -18,6 +18,7 @@
     int guitarTop;
 }
 
+//Assign enum to the differnt types of maple guitar tops
 typedef enum {
     QUILTMAPLE,
     FLAMEMAPLE,

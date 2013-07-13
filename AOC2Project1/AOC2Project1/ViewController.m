@@ -39,9 +39,7 @@
         [newBCRich setGuitarModel:@"Jr V Body Art"];
         [newBCRich setGuitarCondition:0.75f];
         [newBCRich setOriginalValue:300];
-        //float newConditionValue = [newBCRich setGuitarCondition:0.25f];
         [newBCRich calcGuitarValue:[newBCRich guitarCondition]];
-        //[newBCRich increasedValue];
     }
     
     //Create BCRich Static label
@@ -62,6 +60,7 @@
         bcrichLabel2.textColor = [UIColor blackColor];
         bcrichLabel2.textAlignment = NSTextAlignmentCenter;
         bcrichLabel2.numberOfLines = 2;
+        //Display total current value of guitar
         bcrichLabel2.text = [NSString stringWithFormat:@"Because it is rare, it's currently valued at $%d after %d years of ownership.", [newBCRich increasedValue], [newBCRich yearsOwned]];
         [self.view addSubview:bcrichLabel2];
         //NSLog(@"%d", [newBCRich increasedValue]);
@@ -96,11 +95,12 @@
         espLabel2.textColor = [UIColor blackColor];
         espLabel2.textAlignment = NSTextAlignmentCenter;
         espLabel2.numberOfLines = 2;
+        //Display value added by guitar top
         espLabel2.text = [NSString stringWithFormat:@"The Flamed Maple top adds $%.2f to the value of the guitar.", [newESP valueAdded]];
         [self.view addSubview:espLabel2];
     }
     
-    //Create an instance of ESPGuitar class
+    //Create an instance of SchecterGuitar class
     SchecterGuitar *newSchecter = (SchecterGuitar*)[GuitarFactory createNewGuitar:SCHECTER];
     if (newSchecter != nil) {
         [newSchecter setGuitarYear:2008];
@@ -129,6 +129,7 @@
         schecterLabel2.textColor = [UIColor blackColor];
         schecterLabel2.textAlignment = NSTextAlignmentCenter;
         schecterLabel2.numberOfLines = 2;
+        //Display number of available notes instead of value calculation
         schecterLabel2.text = [NSString stringWithFormat:@"Because it has %d strings and %d frets, there are %d notes on the fretboard.", [newSchecter numberOfStrings], [newSchecter numberOfFrets], [newSchecter numberOfNotes]];
         [self.view addSubview:schecterLabel2];
     }

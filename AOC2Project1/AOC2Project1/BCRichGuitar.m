@@ -19,7 +19,7 @@
 //Synthesize to create getter and setter methods
 @synthesize numberMade, yearsOwned;
 
-//Customise init to set unique data members
+//Customize init to set unique data members
 -(id)init {
     self = [super init];
     if (self != nil) {

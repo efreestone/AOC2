@@ -36,12 +36,6 @@
 -(void)calcGuitarValue: (float) addedValue {
     [self setIncreasedValue:(self.originalValue)]; // / self.guitarCondition
     //NSLog(@"The guitars original value is $%d", self.increasedValue);
-    //return newAddedValue;
 }
-
-/*{
-    int guitarNumber;
-    NSString *guitarModel;
-}*/
 
 @end
