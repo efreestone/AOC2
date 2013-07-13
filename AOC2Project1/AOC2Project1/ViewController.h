@@ -17,7 +17,7 @@
 
 @interface ViewController : UIViewController
 
-//Declare labels
+//Declare labels. 1 is static, 2 is dynamic with calculation
 {
     UILabel *guitarLabel, *bcrichLabel1, *bcrichLabel2, *espLabel1, *espLabel2, *schecterLabel1, *schecterLabel2;
 }
