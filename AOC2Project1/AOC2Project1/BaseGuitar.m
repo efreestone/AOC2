@@ -34,7 +34,7 @@
 
 //Calculation/manipulation method to determine value of guitar
 -(void)calcGuitarValue: (float) addedValue {
-    [self setIncreasedValue:(self.originalValue / self.guitarCondition)];
+    [self setIncreasedValue:(self.originalValue)]; // / self.guitarCondition
     NSLog(@"The guitars original value is $%d", self.increasedValue);
     //return newAddedValue;
 }

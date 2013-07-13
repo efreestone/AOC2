@@ -22,17 +22,17 @@
 -(id)init {
     self = [super init];
     if (self != nil) {
-        [self setNumberMade:3000];
-        [self setYearsOwned:11];
+        [self setNumberMade:4000];
+        [self setYearsOwned:10];
     }
     return self;
 };
 
 //Override base guitar value calculation to factor in unique data members
--(void)calcGuitarValue { //: (int) addedValue
-    [self setIncreasedValue:(self.numberMade + self.yearsOwned)];
+-(void)calcGuitarValue: (float) addedValue { //
+    [self setIncreasedValue:((self.numberMade / self.yearsOwned) + self.originalValue)];
     //int newAddedValue = self.originalValue;
-    NSLog(@"The guitars original value is $%d", self.increasedValue);
+    NSLog(@"The guitar is currently valued at $%d", self.increasedValue);
     //return newAddedValue;
 }
 

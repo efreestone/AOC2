@@ -50,7 +50,7 @@
         bcrichLabel1.textColor = [UIColor blackColor];
         bcrichLabel1.textAlignment = NSTextAlignmentCenter;
         bcrichLabel1.numberOfLines = 2;
-        bcrichLabel1.text = [NSString stringWithFormat:@"The %d BC Rich %@ model is in %.2f condition. Original value is $%d.", [newBCRich guitarYear],[newBCRich guitarModel], [newBCRich guitarCondition], [newBCRich originalValue]];
+        bcrichLabel1.text = [NSString stringWithFormat:@"The %d BC Rich %@ is in %.2f condition. Original value is $%d.", [newBCRich guitarYear],[newBCRich guitarModel], [newBCRich guitarCondition], [newBCRich originalValue]];
         [self.view addSubview:bcrichLabel1];
     }
     
@@ -61,7 +61,7 @@
         bcrichLabel2.textColor = [UIColor blackColor];
         bcrichLabel2.textAlignment = NSTextAlignmentCenter;
         bcrichLabel2.numberOfLines = 2;
-        bcrichLabel2.text = [NSString stringWithFormat:@"It is rare and the value has gone up by $%d in the %d years I've owned it", [newBCRich increasedValue], [newBCRich yearsOwned]];
+        bcrichLabel2.text = [NSString stringWithFormat:@"Because it is rare, it's currently valued at $%d after %d years of ownership.", [newBCRich increasedValue], [newBCRich yearsOwned]];
         [self.view addSubview:bcrichLabel2];
         //NSLog(@"%d", [newBCRich increasedValue]);
     }
