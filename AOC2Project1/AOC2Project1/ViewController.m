@@ -100,6 +100,28 @@
         [self.view addSubview:espLabel2];
     }
     
+    //Create an instance of ESPGuitar class
+    SchecterGuitar *newSchecter = (SchecterGuitar*)[GuitarFactory createNewGuitar:SCHECTER];
+    if (newSchecter != nil) {
+        [newSchecter setGuitarYear:2008];
+        [newSchecter setGuitarModel:@"Damien-7"];
+        [newSchecter setGuitarCondition:0.85f];
+        [newSchecter setOriginalValue:600];
+        [newSchecter calcGuitarValue:[newSchecter numberOfFrets]];
+        //NSLog(@"%d", [newSchecter numberOfNotes]);
+    }
+    
+    //Create Schecter Static label
+    schecterLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 300.0f, 50.0f)];
+    if (schecterLabel1 != nil) {
+        schecterLabel1.backgroundColor = [UIColor whiteColor];
+        schecterLabel1.textColor = [UIColor blackColor];
+        schecterLabel1.textAlignment = NSTextAlignmentCenter;
+        schecterLabel1.numberOfLines = 2;
+        schecterLabel1.text = [NSString stringWithFormat:@"My %d Schecter %@ is in %.2f condition. Original value is $%d.", [newSchecter guitarYear], [newSchecter guitarModel], [newSchecter guitarCondition], [newSchecter originalValue]];
+        [self.view addSubview:schecterLabel1];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
