@@ -15,6 +15,7 @@
 
 @implementation ESPGuitar
 
+//Synthesize to create getter and setter methods
 @synthesize topMaterial, valueAdded;
 
 //Custumize init for factoring added value of a maple guitar top
