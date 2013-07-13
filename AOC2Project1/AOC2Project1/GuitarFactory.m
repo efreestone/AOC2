@@ -16,9 +16,9 @@
 @implementation GuitarFactory
 
 +(BaseGuitar *) createNewGuitar:(int)guitarBrand {
-    return [[BCRichGuitar alloc] init];
+    //return [[BCRichGuitar alloc] init];
     // If Guitar brand is BC Rich
-    /*if (guitarBrand == BCRICH) {
+    if (guitarBrand == BCRICH) {
         return [[BCRichGuitar alloc] init];
         // else if Guitar brand is ESP
     } else if (guitarBrand == ESP) {
@@ -28,7 +28,7 @@
         return [[SchecterGuitar alloc] init];
     } else {
         return nil;
-    }*/
+    }
 }
 
 @end

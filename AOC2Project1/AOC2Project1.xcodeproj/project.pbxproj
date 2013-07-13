@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		B80A17CA1790A169007D86C7 /* BaseGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B80A17C91790A169007D86C7 /* BaseGuitar.m */; };
 		B80A17CD1790A1CA007D86C7 /* GuitarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B80A17CC1790A1CA007D86C7 /* GuitarFactory.m */; };
-		B80A17D11790A4E7007D86C7 /* ESPGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B80A17D01790A4E7007D86C7 /* ESPGuitar.m */; };
-		B80A17D41790A4FC007D86C7 /* SchecterGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B80A17D31790A4FC007D86C7 /* SchecterGuitar.m */; };
-		B80A17D71790A510007D86C7 /* BCRichGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B80A17D61790A510007D86C7 /* BCRichGuitar.m */; };
 		B82E73CE178C92C50048E57B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82E73CD178C92C50048E57B /* UIKit.framework */; };
 		B82E73D0178C92C50048E57B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82E73CF178C92C50048E57B /* Foundation.framework */; };
 		B82E73D2178C92C50048E57B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82E73D1178C92C50048E57B /* CoreGraphics.framework */; };
@@ -24,6 +21,9 @@
 		B82E73E7178C92C50048E57B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82E73E6178C92C50048E57B /* ViewController.m */; };
 		B82E73EA178C92C50048E57B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E73E8178C92C50048E57B /* ViewController_iPhone.xib */; };
 		B82E73ED178C92C50048E57B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E73EB178C92C50048E57B /* ViewController_iPad.xib */; };
+		B86D80E11791010B009A47F9 /* BCRichGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D80E01791010B009A47F9 /* BCRichGuitar.m */; };
+		B86D80E4179101C7009A47F9 /* ESPGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D80E3179101C7009A47F9 /* ESPGuitar.m */; };
+		B86D80E7179101F8009A47F9 /* SchecterGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D80E6179101F8009A47F9 /* SchecterGuitar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +31,6 @@
 		B80A17C91790A169007D86C7 /* BaseGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGuitar.m; sourceTree = "<group>"; };
 		B80A17CB1790A1CA007D86C7 /* GuitarFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarFactory.h; sourceTree = "<group>"; };
 		B80A17CC1790A1CA007D86C7 /* GuitarFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarFactory.m; sourceTree = "<group>"; };
-		B80A17CF1790A4E7007D86C7 /* ESPGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPGuitar.h; sourceTree = "<group>"; };
-		B80A17D01790A4E7007D86C7 /* ESPGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPGuitar.m; sourceTree = "<group>"; };
-		B80A17D21790A4FC007D86C7 /* SchecterGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchecterGuitar.h; sourceTree = "<group>"; };
-		B80A17D31790A4FC007D86C7 /* SchecterGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchecterGuitar.m; sourceTree = "<group>"; };
-		B80A17D51790A510007D86C7 /* BCRichGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRichGuitar.h; sourceTree = "<group>"; };
-		B80A17D61790A510007D86C7 /* BCRichGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRichGuitar.m; sourceTree = "<group>"; };
 		B82E73CA178C92C50048E57B /* AOC2Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOC2Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B82E73CD178C92C50048E57B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B82E73CF178C92C50048E57B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +48,12 @@
 		B82E73E6178C92C50048E57B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B82E73E9178C92C50048E57B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B82E73EC178C92C50048E57B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B86D80DF1791010B009A47F9 /* BCRichGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRichGuitar.h; sourceTree = "<group>"; };
+		B86D80E01791010B009A47F9 /* BCRichGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRichGuitar.m; sourceTree = "<group>"; };
+		B86D80E2179101C7009A47F9 /* ESPGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPGuitar.h; sourceTree = "<group>"; };
+		B86D80E3179101C7009A47F9 /* ESPGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPGuitar.m; sourceTree = "<group>"; };
+		B86D80E5179101F8009A47F9 /* SchecterGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchecterGuitar.h; sourceTree = "<group>"; };
+		B86D80E6179101F8009A47F9 /* SchecterGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchecterGuitar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,16 +107,16 @@
 				B82E73E8178C92C50048E57B /* ViewController_iPhone.xib */,
 				B82E73EB178C92C50048E57B /* ViewController_iPad.xib */,
 				B82E73D4178C92C50048E57B /* Supporting Files */,
-				B80A17C81790A169007D86C7 /* BaseGuitar.h */,
-				B80A17C91790A169007D86C7 /* BaseGuitar.m */,
 				B80A17CB1790A1CA007D86C7 /* GuitarFactory.h */,
 				B80A17CC1790A1CA007D86C7 /* GuitarFactory.m */,
-				B80A17D51790A510007D86C7 /* BCRichGuitar.h */,
-				B80A17D61790A510007D86C7 /* BCRichGuitar.m */,
-				B80A17CF1790A4E7007D86C7 /* ESPGuitar.h */,
-				B80A17D01790A4E7007D86C7 /* ESPGuitar.m */,
-				B80A17D21790A4FC007D86C7 /* SchecterGuitar.h */,
-				B80A17D31790A4FC007D86C7 /* SchecterGuitar.m */,
+				B80A17C81790A169007D86C7 /* BaseGuitar.h */,
+				B80A17C91790A169007D86C7 /* BaseGuitar.m */,
+				B86D80DF1791010B009A47F9 /* BCRichGuitar.h */,
+				B86D80E01791010B009A47F9 /* BCRichGuitar.m */,
+				B86D80E2179101C7009A47F9 /* ESPGuitar.h */,
+				B86D80E3179101C7009A47F9 /* ESPGuitar.m */,
+				B86D80E5179101F8009A47F9 /* SchecterGuitar.h */,
+				B86D80E6179101F8009A47F9 /* SchecterGuitar.m */,
 			);
 			path = AOC2Project1;
 			sourceTree = "<group>";
@@ -207,9 +207,9 @@
 				B82E73E7178C92C50048E57B /* ViewController.m in Sources */,
 				B80A17CA1790A169007D86C7 /* BaseGuitar.m in Sources */,
 				B80A17CD1790A1CA007D86C7 /* GuitarFactory.m in Sources */,
-				B80A17D11790A4E7007D86C7 /* ESPGuitar.m in Sources */,
-				B80A17D41790A4FC007D86C7 /* SchecterGuitar.m in Sources */,
-				B80A17D71790A510007D86C7 /* BCRichGuitar.m in Sources */,
+				B86D80E11791010B009A47F9 /* BCRichGuitar.m in Sources */,
+				B86D80E4179101C7009A47F9 /* ESPGuitar.m in Sources */,
+				B86D80E7179101F8009A47F9 /* SchecterGuitar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
