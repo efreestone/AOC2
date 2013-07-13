@@ -12,7 +12,14 @@
 //
 
 #import <Foundation/Foundation.h>
+//Import BaseGuitar
+#import "BaseGuitar.h"
 
 @interface BCRichGuitar : NSObject
+
+//Unique data members for how many were made and years I've owned the guitar 
+@property int numberMade;
+
+@property int yearsOwned;
 
 @end

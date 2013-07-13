@@ -15,4 +15,31 @@
 
 @interface BaseGuitar : NSObject
 
+{
+    int guitarBrandEnum;
+}
+
+typedef enum {
+    BCRICH,
+    ESP,
+    SCHECTER
+} guitarBrandEnum;
+
+//Data members for year (int), guitar model (string), guitar condition (string), and original value (int) 
+@property int guitarYear;
+
+@property NSString *guitarModel;
+
+@property NSString *guitarCondition;
+
+@property int originalValue;
+
+//Methods
+
+//Initialization
+-(id)init;
+
+//Calculation/manipulation method to determine value of guitar
+-(void)calcGuitarValue;
+
 @end

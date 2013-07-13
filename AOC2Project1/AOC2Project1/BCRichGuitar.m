@@ -15,4 +15,17 @@
 
 @implementation BCRichGuitar
 
+@synthesize numberMade, yearsOwned;
+
+//Customise init to set unique data members
+-(id)init {
+    self = [super init];
+    if (self != nil) {
+        [self setOriginalValue:300];
+        [self setNumberMade:3000];
+        [self setYearsOwned:10];
+    }
+    return self;
+}
+
 @end
