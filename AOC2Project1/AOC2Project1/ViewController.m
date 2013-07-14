@@ -22,6 +22,9 @@
 
 - (void)viewDidLoad
 {
+    //Set background color
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
     //Creating title text label
     guitarLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 30.0f)];
     if (guitarLabel != nil) {
@@ -43,7 +46,7 @@
     }
     
     //Create BCRich Static label
-    bcrichLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 300.0f, 50.0f)];
+    bcrichLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 40.0f, 320.0f, 50.0f)];
     if (bcrichLabel1 != nil) {
         bcrichLabel1.backgroundColor = [UIColor whiteColor];
         bcrichLabel1.textColor = [UIColor blackColor];
@@ -54,7 +57,7 @@
     }
     
     //Create BCRich dynamic label
-    bcrichLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 50.0f)];
+    bcrichLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 50.0f)];
     if (bcrichLabel2 != nil) {
         bcrichLabel2.backgroundColor = [UIColor whiteColor];
         bcrichLabel2.textColor = [UIColor blackColor];
@@ -78,7 +81,7 @@
     }
     
     //Create ESP Static label
-    espLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 160.0f, 300.0f, 50.0f)];
+    espLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 160.0f, 320.0f, 50.0f)];
     if (espLabel1 != nil) {
         espLabel1.backgroundColor = [UIColor whiteColor];
         espLabel1.textColor = [UIColor blackColor];
@@ -89,7 +92,7 @@
     }
     
     //Create ESP Dynamic label
-    espLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 220.0f, 300.0f, 50.0f)];
+    espLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 220.0f, 320.0f, 50.0f)];
     if (espLabel2 != nil) {
         espLabel2.backgroundColor = [UIColor whiteColor];
         espLabel2.textColor = [UIColor blackColor];
@@ -112,7 +115,7 @@
     }
     
     //Create Schecter Static label
-    schecterLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 300.0f, 50.0f)];
+    schecterLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 280.0f, 320.0f, 50.0f)];
     if (schecterLabel1 != nil) {
         schecterLabel1.backgroundColor = [UIColor whiteColor];
         schecterLabel1.textColor = [UIColor blackColor];
@@ -123,7 +126,7 @@
     }
     
     //Create Schecter Dynamic label
-    schecterLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 50.0f)];
+    schecterLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 340.0f, 320.0f, 50.0f)];
     if (schecterLabel2 != nil) {
         schecterLabel2.backgroundColor = [UIColor whiteColor];
         schecterLabel2.textColor = [UIColor blackColor];
