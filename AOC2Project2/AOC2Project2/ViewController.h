@@ -24,11 +24,13 @@
     IBOutlet UILabel *testLabel, *stepperLabel;
     IBOutlet UIButton *testButton, *testButton2;
     IBOutlet UIStepper *stepperControl;
+    IBOutlet UISegmentedControl *segmentControl;
 }
 
 -(IBAction)onClick:(id)sender;
 
 -(IBAction)onChange:(id)sender;
 
+-(IBAction)onSegment:(id)sender;
 
 @end

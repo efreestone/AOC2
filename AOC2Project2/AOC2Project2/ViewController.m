@@ -21,6 +21,7 @@
 
 @implementation ViewController
 
+//onClick function for buttons
 -(IBAction)onClick:(id)sender {
     //Cast send into a UIButton
     UIButton *buttonClicked = (UIButton *)sender;
@@ -45,11 +46,29 @@
     }
 }
 
+//onChange function for stepper control
 -(IBAction)onChange:(id)sender {
+    //Cast stepper to stepControl
     UIStepper *stepControl = (UIStepper *) sender;
     if (stepControl != nil) {
         int currentValue = stepControl.value;
         stepperLabel.text = [NSString stringWithFormat:@"Step value is =%d", currentValue];
+    }
+}
+
+-(IBAction)onSegment:(id)sender {
+    //Cast segment control to segmentControl
+    UISegmentedControl *segControl = (UISegmentedControl *)sender;
+    if (segControl != nil) {
+        int selectedSegment = segControl.selectedSegmentIndex;
+        //NSLog(@"Selected index %d", selectedSegment);
+        if (selectedSegment == 0) {
+            self.view.backgroundColor = [UIColor whiteColor];
+        } else if (selectedSegment == 1) {
+            self.view.backgroundColor = [UIColor blueColor];
+        } else if (selectedSegment == 2) {
+            self.view.backgroundColor = [UIColor redColor];
+        }
     }
 }
 
