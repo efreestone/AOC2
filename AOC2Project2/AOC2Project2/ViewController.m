@@ -45,6 +45,14 @@
     }
 }
 
+-(IBAction)onChange:(id)sender {
+    UIStepper *stepControl = (UIStepper *) sender;
+    if (stepControl != nil) {
+        int currentValue = stepControl.value;
+        stepperLabel.text = [NSString stringWithFormat:@"Step value is =%d", currentValue];
+    }
+}
+
 - (void)viewDidLoad
 {
     //Set background color

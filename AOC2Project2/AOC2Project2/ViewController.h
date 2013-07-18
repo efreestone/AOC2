@@ -21,11 +21,14 @@
 {
     UILabel *guitarLabel, *bcrichLabel1, *bcrichLabel2, *espLabel1, *espLabel2, *schecterLabel1, *schecterLabel2;
     
-    IBOutlet UILabel *testLabel;
+    IBOutlet UILabel *testLabel, *stepperLabel;
     IBOutlet UIButton *testButton, *testButton2;
+    IBOutlet UIStepper *stepperControl;
 }
 
 -(IBAction)onClick:(id)sender;
+
+-(IBAction)onChange:(id)sender;
 
 
 @end
