@@ -19,11 +19,27 @@
 
 @implementation ViewController
 
+-(IBAction)onClick:(id)sender {
+    UIButton *buttonClicked = (UIButton *)sender;
+    if (buttonClicked != nil) {
+        if (buttonClicked.tag == 0) {
+            testButton2.enabled = true;
+            testButton.enabled = false;
+            testLabel.text = @"Button 1 clicked!!";
+        } else if (buttonClicked.tag == 1) {
+            //testButton.tintColor = [UIColor redColor];
+            testButton.enabled = true;
+            testButton2.enabled = false;
+            testLabel.text = @"Button 2 clicked!!";
+        }
+    }
+}
 
 - (void)viewDidLoad
 {
     //Set background color
     self.view.backgroundColor = [UIColor darkGrayColor];
+
     
     testLabel.text = @"It works!!";
     
