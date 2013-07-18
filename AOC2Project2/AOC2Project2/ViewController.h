@@ -21,8 +21,9 @@
 {
     UILabel *guitarLabel, *bcrichLabel1, *bcrichLabel2, *espLabel1, *espLabel2, *schecterLabel1, *schecterLabel2;
     
-    IBOutlet UILabel *testLabel, *stepperLabel;
-    IBOutlet UIButton *testButton, *testButton2;
+    IBOutlet UILabel *stepperLabel;
+    IBOutlet UITextField *guitarDisplay;
+    IBOutlet UIButton *bcrichButton, *espButton, *schecterButton;
     IBOutlet UIStepper *stepperControl;
     IBOutlet UISegmentedControl *segmentControl;
 }

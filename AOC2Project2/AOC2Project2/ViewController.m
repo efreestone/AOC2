@@ -28,16 +28,23 @@
     
     if (buttonClicked != nil) {
         if (buttonClicked.tag == 0) {
-            testButton2.enabled = true;
-            testButton.enabled = false;
-            testLabel.text = @"Button 1 clicked!!";
+            bcrichButton.enabled = false;
+            espButton.enabled = true;
+            schecterButton.enabled = true;
+            guitarDisplay.text = [NSString stringWithFormat:@"BC Rich Jr V Body Art"];
         } else if (buttonClicked.tag == 1) {
             //testButton.tintColor = [UIColor redColor];
-            testButton.enabled = true;
-            testButton2.enabled = false;
-            testLabel.text = @"Button 2 clicked!!";
+            bcrichButton.enabled = true;
+            espButton.enabled = false;
+            schecterButton.enabled = true;
+            guitarDisplay.text = [NSString stringWithFormat:@"ESP LTD H-1001FM"];
         } else if (buttonClicked.tag == 2) {
-            testLabel.text = @"View Button clicked!!";
+            bcrichButton.enabled = true;
+            espButton.enabled = true;
+            schecterButton.enabled = false;
+            guitarDisplay.text = [NSString stringWithFormat:@"Schecter Damien-7"];
+        } else if (buttonClicked.tag == 3) {
+            //testLabel.text = @"View Button clicked!!";
             SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
             if (viewController != nil) {
                 [self presentViewController:viewController animated:TRUE completion:nil];
@@ -52,7 +59,7 @@
     UIStepper *stepControl = (UIStepper *) sender;
     if (stepControl != nil) {
         int currentValue = stepControl.value;
-        stepperLabel.text = [NSString stringWithFormat:@"Step value is =%d", currentValue];
+        stepperLabel.text = [NSString stringWithFormat:@"Quantity = %d", currentValue];
     }
 }
 
@@ -78,7 +85,7 @@
     self.view.backgroundColor = [UIColor darkGrayColor];
 
     
-    testLabel.text = @"It works!!";
+    //testLabel.text = @"It works!!";
     
     //Creating title text label
     /*guitarLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 30.0f)];
