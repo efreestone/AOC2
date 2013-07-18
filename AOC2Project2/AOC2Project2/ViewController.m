@@ -94,10 +94,9 @@
                 [newBCRich setOriginalValue:300];
                 [newBCRich calcGuitarValue:[newBCRich guitarCondition]];
                 //Create new int to capture bcrich math and stepper
-                int totalValue = newBCRich.increasedValue * currentStep;
-                
-                
-                guitarDisplay.text = [NSString stringWithFormat:@"%d BC Rich are worth $%d.", currentStep, totalValue];
+                int bcrTotalValue = newBCRich.increasedValue * currentStep;
+                //Display total in guitarDisplay
+                guitarDisplay.text = [NSString stringWithFormat:@"%d BC Rich. Total value is $%d.", currentStep, bcrTotalValue];
             }
         } else if (espButton.enabled == false) {
             //Create an instance of ESPGuitar class
@@ -109,9 +108,10 @@
                  [newESP setOriginalValue:1000];
                  [newESP setTopMaterial:FLAMEMAPLE];
                  [newESP calcGuitarValue:[newESP guitarCondition]];
-                 
-                 
-                 guitarDisplay.text = [NSString stringWithFormat:@"ESP works"];
+                 //Create int to capture esp math and stepper
+                 int espTotalValue = newESP.valueAdded * currentStep;
+                 //Display total in guitarDisplay
+                 guitarDisplay.text = [NSString stringWithFormat:@"%d ESP. Total value added is $%d.", currentStep, espTotalValue];
              }
         } else if (schecterButton.enabled == false) {
             //Create an instance of SchecterGuitar class
