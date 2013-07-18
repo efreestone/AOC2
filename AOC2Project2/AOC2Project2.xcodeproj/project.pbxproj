@@ -17,7 +17,7 @@
 		B8D303F117977233001CE404 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D303F017977233001CE404 /* Default@2x.png */; };
 		B8D303F317977233001CE404 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D303F217977233001CE404 /* Default-568h@2x.png */; };
 		B8D303F617977233001CE404 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D303F517977233001CE404 /* ViewController.m */; };
-		B8D303F917977233001CE404 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D303F717977233001CE404 /* ViewController_iPhone.xib */; };
+		B8D303F917977233001CE404 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D303F717977233001CE404 /* ViewController.xib */; };
 		B8D303FC17977233001CE404 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D303FA17977233001CE404 /* ViewController_iPad.xib */; };
 		B8D30404179772E6001CE404 /* GuitarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D30403179772E6001CE404 /* GuitarFactory.m */; };
 		B8D304071797731F001CE404 /* BaseGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D304061797731F001CE404 /* BaseGuitar.m */; };
@@ -44,7 +44,7 @@
 		B8D303F217977233001CE404 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B8D303F417977233001CE404 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B8D303F517977233001CE404 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B8D303F817977233001CE404 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B8D303F817977233001CE404 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B8D303FB17977233001CE404 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		B8D30402179772E6001CE404 /* GuitarFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuitarFactory.h; sourceTree = "<group>"; };
 		B8D30403179772E6001CE404 /* GuitarFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuitarFactory.m; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				B8D303EC17977233001CE404 /* AppDelegate.m */,
 				B8D303F417977233001CE404 /* ViewController.h */,
 				B8D303F517977233001CE404 /* ViewController.m */,
-				B8D303F717977233001CE404 /* ViewController_iPhone.xib */,
+				B8D303F717977233001CE404 /* ViewController.xib */,
 				B8D303FA17977233001CE404 /* ViewController_iPad.xib */,
 				B8D303E317977233001CE404 /* Supporting Files */,
 				B8D30402179772E6001CE404 /* GuitarFactory.h */,
@@ -198,7 +198,7 @@
 				B8D303EF17977233001CE404 /* Default.png in Resources */,
 				B8D303F117977233001CE404 /* Default@2x.png in Resources */,
 				B8D303F317977233001CE404 /* Default-568h@2x.png in Resources */,
-				B8D303F917977233001CE404 /* ViewController_iPhone.xib in Resources */,
+				B8D303F917977233001CE404 /* ViewController.xib in Resources */,
 				B8D303FC17977233001CE404 /* ViewController_iPad.xib in Resources */,
 				B8E482F817978B3F00E12FA8 /* SecondView.xib in Resources */,
 			);
@@ -234,12 +234,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B8D303F717977233001CE404 /* ViewController_iPhone.xib */ = {
+		B8D303F717977233001CE404 /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B8D303F817977233001CE404 /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 		B8D303FA17977233001CE404 /* ViewController_iPad.xib */ = {
