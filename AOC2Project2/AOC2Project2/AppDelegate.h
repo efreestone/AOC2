@@ -1,3 +1,8 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 2
+// July 15th, 2013
+
 //
 //  AppDelegate.h
 //  AOC2Project2
