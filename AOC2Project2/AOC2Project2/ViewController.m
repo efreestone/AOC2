@@ -21,7 +21,24 @@
 
 @implementation ViewController
 
-//onClick function for buttons
+//Segment function to change background color
+-(IBAction)onSegment:(id)sender {
+    //Cast segment control to segmentControl
+    UISegmentedControl *segControl = (UISegmentedControl *)sender;
+    if (segControl != nil) {
+        int selectedSegment = segControl.selectedSegmentIndex;
+        //NSLog(@"Selected index %d", selectedSegment);
+        if (selectedSegment == 0) {
+            self.view.backgroundColor = [UIColor cyanColor];
+        } else if (selectedSegment == 1) {
+            self.view.backgroundColor = [UIColor whiteColor];
+        } else if (selectedSegment == 2) {
+            self.view.backgroundColor = [UIColor redColor];
+        }
+    }
+}
+
+//onClick function for buttons with enabled toggle for logic of onCalculate. Also adds second view via info btn
 -(IBAction)onClick:(id)sender {
     //Cast send into a UIButton
     UIButton *buttonClicked = (UIButton *)sender;
@@ -44,7 +61,6 @@
             schecterButton.enabled = false;
             guitarDisplay.text = [NSString stringWithFormat:@"Schecter Damien-7"];
         } else if (buttonClicked.tag == 3) {
-            //testLabel.text = @"View Button clicked!!";
             SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
             if (viewController != nil) {
                 [self presentViewController:viewController animated:TRUE completion:nil];
@@ -65,6 +81,8 @@
 
 -(IBAction)onCalculate:(id)sender {
     UIButton *buttonCalc = (UIButton *)sender;
+    int currentStep = stepperControl.value;
+    
     if (buttonCalc != nil) {
         if (bcrichButton.enabled == false) {
             //Create isntance of BCRichGuitar class
@@ -75,9 +93,11 @@
                 [newBCRich setGuitarCondition:0.75f];
                 [newBCRich setOriginalValue:300];
                 [newBCRich calcGuitarValue:[newBCRich guitarCondition]];
+                //Create new int to capture bcrich math and stepper
+                int totalValue = newBCRich.increasedValue * currentStep;
                 
                 
-                guitarDisplay.text = [NSString stringWithFormat:@"BC Rich works"];
+                guitarDisplay.text = [NSString stringWithFormat:@"%d BC Rich are worth $%d.", currentStep, totalValue];
             }
         } else if (espButton.enabled == false) {
             //Create an instance of ESPGuitar class
@@ -109,22 +129,6 @@
              }
         } else {
             guitarDisplay.text = [NSString stringWithFormat:@"Please select a guitar brand"];
-        }
-    }
-}
-
--(IBAction)onSegment:(id)sender {
-    //Cast segment control to segmentControl
-    UISegmentedControl *segControl = (UISegmentedControl *)sender;
-    if (segControl != nil) {
-        int selectedSegment = segControl.selectedSegmentIndex;
-        //NSLog(@"Selected index %d", selectedSegment);
-        if (selectedSegment == 0) {
-            self.view.backgroundColor = [UIColor cyanColor];
-        } else if (selectedSegment == 1) {
-            self.view.backgroundColor = [UIColor whiteColor];
-        } else if (selectedSegment == 2) {
-            self.view.backgroundColor = [UIColor redColor];
         }
     }
 }
