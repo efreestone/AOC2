@@ -24,6 +24,8 @@
 		B8D3040A17977358001CE404 /* BCRichGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3040917977358001CE404 /* BCRichGuitar.m */; };
 		B8D3040D1797738F001CE404 /* ESPGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3040C1797738F001CE404 /* ESPGuitar.m */; };
 		B8D30410179773D0001CE404 /* SchecterGuitar.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D3040F179773CF001CE404 /* SchecterGuitar.m */; };
+		B8E482F817978B3F00E12FA8 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E482F717978B3F00E12FA8 /* SecondView.xib */; };
+		B8E482FB17978DB300E12FA8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E482FA17978DB300E12FA8 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		B8D3040C1797738F001CE404 /* ESPGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPGuitar.m; sourceTree = "<group>"; };
 		B8D3040E179773CF001CE404 /* SchecterGuitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchecterGuitar.h; sourceTree = "<group>"; };
 		B8D3040F179773CF001CE404 /* SchecterGuitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchecterGuitar.m; sourceTree = "<group>"; };
+		B8E482F717978B3F00E12FA8 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
+		B8E482F917978DB300E12FA8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		B8E482FA17978DB300E12FA8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				B8D3040C1797738F001CE404 /* ESPGuitar.m */,
 				B8D3040E179773CF001CE404 /* SchecterGuitar.h */,
 				B8D3040F179773CF001CE404 /* SchecterGuitar.m */,
+				B8E482F717978B3F00E12FA8 /* SecondView.xib */,
+				B8E482F917978DB300E12FA8 /* SecondViewController.h */,
+				B8E482FA17978DB300E12FA8 /* SecondViewController.m */,
 			);
 			path = AOC2Project2;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				B8D303F317977233001CE404 /* Default-568h@2x.png in Resources */,
 				B8D303F917977233001CE404 /* ViewController_iPhone.xib in Resources */,
 				B8D303FC17977233001CE404 /* ViewController_iPad.xib in Resources */,
+				B8E482F817978B3F00E12FA8 /* SecondView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,7 @@
 				B8D3040A17977358001CE404 /* BCRichGuitar.m in Sources */,
 				B8D3040D1797738F001CE404 /* ESPGuitar.m in Sources */,
 				B8D30410179773D0001CE404 /* SchecterGuitar.m in Sources */,
+				B8E482FB17978DB300E12FA8 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +350,7 @@
 				B8D3040117977233001CE404 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

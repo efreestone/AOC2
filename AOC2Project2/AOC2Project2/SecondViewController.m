@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "SecondViewViewController.h"
+#import "SecondViewController.h"
 
-@interface SecondViewViewController ()
+@interface SecondViewController ()
 
 @end
 
-@implementation SecondViewViewController
+@implementation SecondViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +33,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)onClose:(id)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 @end

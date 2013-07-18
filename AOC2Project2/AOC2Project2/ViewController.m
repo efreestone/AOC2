@@ -12,6 +12,8 @@
 //
 
 #import "ViewController.h"
+//Import Second ViewController
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -20,7 +22,9 @@
 @implementation ViewController
 
 -(IBAction)onClick:(id)sender {
+    //Cast send into a UIButton
     UIButton *buttonClicked = (UIButton *)sender;
+    
     if (buttonClicked != nil) {
         if (buttonClicked.tag == 0) {
             testButton2.enabled = true;
@@ -31,6 +35,12 @@
             testButton.enabled = true;
             testButton2.enabled = false;
             testLabel.text = @"Button 2 clicked!!";
+        } else if (buttonClicked.tag == 2) {
+            testLabel.text = @"View Button clicked!!";
+            SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
+            if (viewController != nil) {
+                [self presentViewController:viewController animated:TRUE completion:nil];
+            }
         }
     }
 }
