@@ -63,6 +63,56 @@
     }
 }
 
+-(IBAction)onCalculate:(id)sender {
+    UIButton *buttonCalc = (UIButton *)sender;
+    if (buttonCalc != nil) {
+        if (bcrichButton.enabled == false) {
+            //Create isntance of BCRichGuitar class
+            BCRichGuitar *newBCRich = (BCRichGuitar*)[GuitarFactory createNewGuitar:BCRICH];
+            if (newBCRich != nil) {
+                [newBCRich setGuitarYear:2003];
+                [newBCRich setGuitarModel:@"Jr V Body Art"];
+                [newBCRich setGuitarCondition:0.75f];
+                [newBCRich setOriginalValue:300];
+                [newBCRich calcGuitarValue:[newBCRich guitarCondition]];
+                
+                
+                guitarDisplay.text = [NSString stringWithFormat:@"BC Rich works"];
+            }
+        } else if (espButton.enabled == false) {
+            //Create an instance of ESPGuitar class
+            ESPGuitar *newESP = (ESPGuitar*)[GuitarFactory createNewGuitar:ESP];
+             if (newESP != nil) {
+                 [newESP setGuitarYear:2010];
+                 [newESP setGuitarModel:@"LTD H-1001FM"];
+                 [newESP setGuitarCondition:0.95f];
+                 [newESP setOriginalValue:1000];
+                 [newESP setTopMaterial:FLAMEMAPLE];
+                 [newESP calcGuitarValue:[newESP guitarCondition]];
+                 
+                 
+                 guitarDisplay.text = [NSString stringWithFormat:@"ESP works"];
+             }
+        } else if (schecterButton.enabled == false) {
+            //Create an instance of SchecterGuitar class
+            SchecterGuitar *newSchecter = (SchecterGuitar*)[GuitarFactory createNewGuitar:SCHECTER];
+             if (newSchecter != nil) {
+                 [newSchecter setGuitarYear:2008];
+                 [newSchecter setGuitarModel:@"Damien-7"];
+                 [newSchecter setGuitarCondition:0.85f];
+                 [newSchecter setOriginalValue:500];
+                 [newSchecter calcGuitarValue:[newSchecter numberOfFrets]];
+                 //NSLog(@"%d", [newSchecter numberOfNotes]);
+                 
+                 
+                 guitarDisplay.text = [NSString stringWithFormat:@"Schecter works"];
+             }
+        } else {
+            guitarDisplay.text = [NSString stringWithFormat:@"Please select a guitar brand"];
+        }
+    }
+}
+
 -(IBAction)onSegment:(id)sender {
     //Cast segment control to segmentControl
     UISegmentedControl *segControl = (UISegmentedControl *)sender;
@@ -83,19 +133,6 @@
 {
     //Set background color
     self.view.backgroundColor = [UIColor darkGrayColor];
-
-    
-    //testLabel.text = @"It works!!";
-    
-    //Creating title text label
-    /*guitarLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 30.0f)];
-    if (guitarLabel != nil) {
-        guitarLabel.backgroundColor = [UIColor whiteColor];
-        guitarLabel.textColor = [UIColor blackColor];
-        guitarLabel.textAlignment = NSTextAlignmentCenter;
-        guitarLabel.text = @"Guitar Factory";
-        [self.view addSubview:guitarLabel];
-    }*/
     
     //Create isntance of BCRichGuitar class
     /*BCRichGuitar *newBCRich = (BCRichGuitar*)[GuitarFactory createNewGuitar:BCRICH];

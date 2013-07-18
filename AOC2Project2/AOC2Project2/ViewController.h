@@ -23,7 +23,7 @@
     
     IBOutlet UILabel *stepperLabel;
     IBOutlet UITextField *guitarDisplay;
-    IBOutlet UIButton *bcrichButton, *espButton, *schecterButton;
+    IBOutlet UIButton *bcrichButton, *espButton, *schecterButton, *totalButton;
     IBOutlet UIStepper *stepperControl;
     IBOutlet UISegmentedControl *segmentControl;
 }
@@ -33,5 +33,7 @@
 -(IBAction)onChange:(id)sender;
 
 -(IBAction)onSegment:(id)sender;
+
+-(IBAction)onCalculate:(id)sender;
 
 @end
