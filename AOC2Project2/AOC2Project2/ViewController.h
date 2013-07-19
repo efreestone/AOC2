@@ -19,21 +19,24 @@
 
 //Declare labels. 1 is static, 2 is dynamic with calculation
 {
-    UILabel *guitarLabel, *bcrichLabel1, *bcrichLabel2, *espLabel1, *espLabel2, *schecterLabel1, *schecterLabel2;
-    
+    //Declare stepper label
     IBOutlet UILabel *stepperLabel;
+    //Declare text field
     IBOutlet UITextField *guitarDisplay;
+    //Declare buttons
     IBOutlet UIButton *bcrichButton, *espButton, *schecterButton, *totalButton;
+    //Declare stepper
     IBOutlet UIStepper *stepperControl;
+    //Declare segment buttons
     IBOutlet UISegmentedControl *segmentControl;
 }
-
+//Declare onClick function for all button clicks except "Find Total"
 -(IBAction)onClick:(id)sender;
-
+//Declare onChange function for stepper
 -(IBAction)onChange:(id)sender;
-
+//Declare onSegment function or segment buttons to change color of background
 -(IBAction)onSegment:(id)sender;
-
+//Declare onCalculate for "Find Total" button
 -(IBAction)onCalculate:(id)sender;
 
 @end
