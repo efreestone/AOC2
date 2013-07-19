@@ -26,7 +26,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //New didFinish without if/else to fix iPad crash and use a single nib file. Works for iPhone and iPad now
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    return YES;
+    
+    //Original didFinish with if/else for 2 nib files
+    /*self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil] autorelease];
@@ -35,7 +44,7 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    return YES;
+    return YES;*/
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
