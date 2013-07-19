@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8484E5B1798C41600F5B400 /* profilephoto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8484E5A1798C41600F5B400 /* profilephoto.jpg */; };
 		B8D303DD17977233001CE404 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D303DC17977233001CE404 /* UIKit.framework */; };
 		B8D303DF17977233001CE404 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D303DE17977233001CE404 /* Foundation.framework */; };
 		B8D303E117977233001CE404 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D303E017977233001CE404 /* CoreGraphics.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8484E5A1798C41600F5B400 /* profilephoto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profilephoto.jpg; sourceTree = "<group>"; };
 		B8D303D917977233001CE404 /* AOC2Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOC2Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D303DC17977233001CE404 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B8D303DE17977233001CE404 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +107,7 @@
 		B8D303E217977233001CE404 /* AOC2Project2 */ = {
 			isa = PBXGroup;
 			children = (
+				B8484E5A1798C41600F5B400 /* profilephoto.jpg */,
 				B8D303EB17977233001CE404 /* AppDelegate.h */,
 				B8D303EC17977233001CE404 /* AppDelegate.m */,
 				B8D303F417977233001CE404 /* ViewController.h */,
@@ -201,6 +204,7 @@
 				B8D303F917977233001CE404 /* ViewController.xib in Resources */,
 				B8D303FC17977233001CE404 /* ViewController_iPad.xib in Resources */,
 				B8E482F817978B3F00E12FA8 /* SecondView.xib in Resources */,
+				B8484E5B1798C41600F5B400 /* profilephoto.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

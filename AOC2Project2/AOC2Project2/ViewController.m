@@ -31,7 +31,7 @@
         if (selectedSegment == 0) {
             self.view.backgroundColor = [UIColor cyanColor];
         } else if (selectedSegment == 1) {
-            self.view.backgroundColor = [UIColor whiteColor];
+            self.view.backgroundColor = [UIColor yellowColor];
         } else if (selectedSegment == 2) {
             self.view.backgroundColor = [UIColor redColor];
         }
