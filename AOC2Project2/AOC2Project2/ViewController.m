@@ -123,9 +123,10 @@
                  [newSchecter setOriginalValue:500];
                  [newSchecter calcGuitarValue:[newSchecter numberOfFrets]];
                  //NSLog(@"%d", [newSchecter numberOfNotes]);
-                 
-                 
-                 guitarDisplay.text = [NSString stringWithFormat:@"Schecter works"];
+                 //Create int to capture schecter math and stepper
+                 int schTotalValue = newSchecter.numberOfNotes * currentStep;
+                 //Dispaly total in guitarDisplay
+                 guitarDisplay.text = [NSString stringWithFormat:@"%d Schecter. There are %d available notes.", currentStep, schTotalValue];
              }
         } else {
             guitarDisplay.text = [NSString stringWithFormat:@"Please select a guitar brand"];
