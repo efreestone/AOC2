@@ -17,7 +17,7 @@
 
 @interface ViewController : UIViewController
 
-//Declare labels. 1 is static, 2 is dynamic with calculation
+//Declare IBOutlets
 {
     //Declare stepper label
     IBOutlet UILabel *stepperLabel;
