@@ -26,8 +26,8 @@
     //Cast segment control to segmentControl
     UISegmentedControl *segControl = (UISegmentedControl *)sender;
     if (segControl != nil) {
+        //Capture tag for selected segment in int
         int selectedSegment = segControl.selectedSegmentIndex;
-        //NSLog(@"Selected index %d", selectedSegment);
         if (selectedSegment == 0) {
             self.view.backgroundColor = [UIColor cyanColor];
         } else if (selectedSegment == 1) {
@@ -44,6 +44,7 @@
     UIButton *buttonClicked = (UIButton *)sender;
     
     if (buttonClicked != nil) {
+        //BC Rich Button
         if (buttonClicked.tag == 0) {
             bcrichButton.enabled = false;
             espButton.enabled = true;
@@ -56,6 +57,7 @@
                 [newBCRich setGuitarModel:@"Jr V Body Art"];
                 guitarDisplay.text = [NSString stringWithFormat:@"%d BC Rich %@.", [newBCRich guitarYear],[newBCRich guitarModel]];
             }
+        //ESP Button
         } else if (buttonClicked.tag == 1) {
             bcrichButton.enabled = true;
             espButton.enabled = false;
@@ -68,6 +70,7 @@
                 [newESP setGuitarModel:@"LTD H-1001FM"];
                 guitarDisplay.text = [NSString stringWithFormat:@"%d ESP %@", [newESP guitarYear], [newESP guitarModel]];
             }
+        //Schecter Button
         } else if (buttonClicked.tag == 2) {
             bcrichButton.enabled = true;
             espButton.enabled = true;
@@ -80,6 +83,7 @@
                 [newSchecter setGuitarModel:@"Damien-7"];
                 guitarDisplay.text = [NSString stringWithFormat:@"%d Schecter %@", [newSchecter guitarYear], [newSchecter guitarModel]];
             }
+        //Info Button
         } else if (buttonClicked.tag == 3) {
             SecondViewController *viewController = [[SecondViewController alloc] initWithNibName:@"SecondView" bundle:nil];
             if (viewController != nil) {
@@ -94,6 +98,7 @@
     //Cast stepper to stepControl
     UIStepper *stepControl = (UIStepper *) sender;
     if (stepControl != nil) {
+        //Capture value of stepper
         int currentValue = stepControl.value;
         stepperLabel.text = [NSString stringWithFormat:@"Quantity = %d", currentValue];
     }
@@ -104,6 +109,7 @@
     int currentStep = stepperControl.value;
     
     if (buttonCalc != nil) {
+        //Calc with BC Rich selected
         if (bcrichButton.enabled == false) {
             //Create isntance of BCRichGuitar class
             BCRichGuitar *newBCRich = (BCRichGuitar*)[GuitarFactory createNewGuitar:BCRICH];
@@ -116,6 +122,7 @@
                 //Display total in guitarDisplay
                 guitarDisplay.text = [NSString stringWithFormat:@"%d BC Rich. Total value is $%d.", currentStep, bcrTotalValue];
             }
+        //Calc with ESP selected
         } else if (espButton.enabled == false) {
             //Create an instance of ESPGuitar class
             ESPGuitar *newESP = (ESPGuitar*)[GuitarFactory createNewGuitar:ESP];
@@ -127,8 +134,9 @@
                  //Create int to capture esp math and stepper
                  int espTotalValue = newESP.valueAdded * currentStep;
                  //Display total in guitarDisplay
-                 guitarDisplay.text = [NSString stringWithFormat:@"%d ESP. Total value added is $%d.", currentStep, espTotalValue];
+                 guitarDisplay.text = [NSString stringWithFormat:@"%d ESP. Total added value is $%d.", currentStep, espTotalValue];
              }
+        //Calc with Schecter selected
         } else if (schecterButton.enabled == false) {
             //Create an instance of SchecterGuitar class
             SchecterGuitar *newSchecter = (SchecterGuitar*)[GuitarFactory createNewGuitar:SCHECTER];
@@ -144,6 +152,7 @@
                  //Dispaly total in guitarDisplay
                  guitarDisplay.text = [NSString stringWithFormat:@"%d Schecter. There are %d available notes.", currentStep, schTotalValue];
              }
+        //Fallback if no guitar button is selected
         } else {
             guitarDisplay.text = [NSString stringWithFormat:@"Please select a guitar brand"];
         }

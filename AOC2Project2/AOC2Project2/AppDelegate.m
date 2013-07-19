@@ -34,6 +34,7 @@
     [self.window makeKeyAndVisible];
     return YES;
     
+    //Original didFinish with if/else for 2 nib files
     /*self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
