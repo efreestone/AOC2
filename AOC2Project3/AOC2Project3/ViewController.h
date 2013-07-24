@@ -12,13 +12,17 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import Add Event View
+#import "AddEventView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AddEventViewDelegate>
 {
     //Declare "Date Planner" label
     UILabel *datePlannerLabel;
     //Declare "Add Event" button
     IBOutlet UIButton *addEventBtn;
+    //Declare text view
+    IBOutlet UITextView *eventsView;
 }
 
 //Declare onClick function to add second view
