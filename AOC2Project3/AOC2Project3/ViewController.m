@@ -29,7 +29,7 @@
     if (buttonClicked != nil) {
         //Add Event button
         if (buttonClicked.tag == 0) {
-            NSLog(@"Add Event Button clicked");
+            //NSLog(@"Add Event Button clicked");
             AddEventView *addEventView = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
             if (addEventView != nil) {
                 [self presentViewController:addEventView animated:TRUE completion:nil];
@@ -41,7 +41,7 @@
 - (void)viewDidLoad
 {
     //Set background color
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    //self.view.backgroundColor = [UIColor lightGrayColor];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
