@@ -1,3 +1,8 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 3
+// July 22nd, 2013
+
 //
 //  AddEventView.m
 //  AOC2Project3
@@ -25,9 +30,6 @@
 
 - (void)viewDidLoad
 {
-    //Set background color
-    //self.view.backgroundColor = [UIColor darkGrayColor];
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
