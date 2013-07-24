@@ -15,7 +15,10 @@
 
 @interface AddEventView : UIViewController
 {
+    //Declare event text field
     IBOutlet UITextField *eventTextField;
+    //Declare date picker
+    IBOutlet UIDatePicker *eventDate;
 }
 
 //Declare onClose for closing second view
