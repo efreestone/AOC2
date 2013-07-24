@@ -14,5 +14,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    //Declare "Date Planner" label
+    UILabel *datePlannerLabel;
+}
 
 @end
