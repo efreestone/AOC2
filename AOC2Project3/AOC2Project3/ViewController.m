@@ -12,12 +12,31 @@
 //
 
 #import "ViewController.h"
+//Import second view controller (AddEventView)
+#import "AddEventView.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+//onClick function for all buttons
+-(IBAction)onClick:(id)sender {
+    //Cast send into a UIButton
+    UIButton *buttonClicked = (UIButton *)sender;
+    
+    if (buttonClicked != nil) {
+        //Add Event button
+        if (buttonClicked.tag == 0) {
+            //NSLog(@"Add Event Button clicked");
+            AddEventView *addEventView = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
+            if (addEventView != nil) {
+                [self presentViewController:addEventView animated:TRUE completion:nil];
+            }
+        } //else
+    }
+}
 
 - (void)viewDidLoad
 {

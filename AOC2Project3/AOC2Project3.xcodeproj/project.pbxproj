@@ -19,6 +19,8 @@
 		B85E6F24179E10A500045DF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85E6F23179E10A500045DF0 /* ViewController.m */; };
 		B85E6F27179E10A500045DF0 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85E6F25179E10A500045DF0 /* ViewController_iPhone.xib */; };
 		B85E6F2A179E10A500045DF0 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B85E6F28179E10A500045DF0 /* ViewController_iPad.xib */; };
+		B8C14C5D179F6E6D001736DB /* AddEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C14C5B179F6E6D001736DB /* AddEventView.m */; };
+		B8C14C5E179F6E6D001736DB /* AddEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8C14C5C179F6E6D001736DB /* AddEventView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,9 @@
 		B85E6F23179E10A500045DF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B85E6F26179E10A500045DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B85E6F29179E10A500045DF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B8C14C5A179F6E6D001736DB /* AddEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventView.h; sourceTree = "<group>"; };
+		B8C14C5B179F6E6D001736DB /* AddEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventView.m; sourceTree = "<group>"; };
+		B8C14C5C179F6E6D001736DB /* AddEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,9 @@
 				B85E6F25179E10A500045DF0 /* ViewController_iPhone.xib */,
 				B85E6F28179E10A500045DF0 /* ViewController_iPad.xib */,
 				B85E6F11179E10A500045DF0 /* Supporting Files */,
+				B8C14C5A179F6E6D001736DB /* AddEventView.h */,
+				B8C14C5B179F6E6D001736DB /* AddEventView.m */,
+				B8C14C5C179F6E6D001736DB /* AddEventView.xib */,
 			);
 			path = AOC2Project3;
 			sourceTree = "<group>";
@@ -167,6 +175,7 @@
 				B85E6F21179E10A500045DF0 /* Default-568h@2x.png in Resources */,
 				B85E6F27179E10A500045DF0 /* ViewController_iPhone.xib in Resources */,
 				B85E6F2A179E10A500045DF0 /* ViewController_iPad.xib in Resources */,
+				B8C14C5E179F6E6D001736DB /* AddEventView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +189,7 @@
 				B85E6F17179E10A500045DF0 /* main.m in Sources */,
 				B85E6F1B179E10A500045DF0 /* AppDelegate.m in Sources */,
 				B85E6F24179E10A500045DF0 /* ViewController.m in Sources */,
+				B8C14C5D179F6E6D001736DB /* AddEventView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +320,7 @@
 				B85E6F2F179E10A500045DF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
