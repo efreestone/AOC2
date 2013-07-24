@@ -17,6 +17,11 @@
 {
     //Declare "Date Planner" label
     UILabel *datePlannerLabel;
+    //Declare "Add Event" button
+    IBOutlet UIButton *addEventBtn;
 }
+
+//Declare onClick function to add second view
+-(IBAction)onClick:(id)sender;
 
 @end
