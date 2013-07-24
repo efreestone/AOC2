@@ -10,4 +10,7 @@
 
 @interface AddEventView : UIViewController
 
+//Declare onClose for closing second view
+-(IBAction)onClose:(id)sender;
+
 @end

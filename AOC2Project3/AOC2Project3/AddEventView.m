@@ -35,4 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+//onClose function to close second view (AddEventView)
+-(IBAction)onClose:(id)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
 @end
