@@ -27,12 +27,14 @@
     IBOutlet UITextField *eventTextField;
     //Declare date picker
     IBOutlet UIDatePicker *eventDate;
+    //Declare event label to be used for displaying error message
+    IBOutlet UILabel *eventLabel;
     
     //Declare id for add event view delegate
     id<AddEventViewDelegate> eventDelegate;
 }
 
-//Declare onClose for closing second view
+//Declare saveEvent for closing second view and saving input data
 -(IBAction)saveEvent:(id)sender;
 
 //Declare close keyboard function

@@ -44,15 +44,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-//onClose function to save event and close second view
+//saveEvent function to save event and close second view
 -(IBAction)saveEvent:(id)sender {
-    if (eventDelegate != nil) {
-        //Call to ViewController to save text field
-        [eventDelegate EventSaved:eventTextField.text];
-        NSLog(@"%@", eventTextField.text);
+    //Check that an event was entered in the text field
+    if (eventTextField.text.length > 0) {
+        UIDatePicker *datePicker = (UIDatePicker *)sender;
+        if (datePicker != nil) {
+            
+        }
+        
+        if (eventDelegate != nil) {
+            //Call to ViewController to save text field
+            [eventDelegate EventSaved:eventTextField.text];
+            //NSLog(@"%@", eventTextField.text);
+        }
+        //Close Add Event View and return to primary view
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+    } else {
+        //Provide alert that event description is required
+        eventLabel.text = @"Please enter an event";
+        eventLabel.textColor = [UIColor redColor];
     }
-    //Close Add Event View and return to primary view
-    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 //closeKeyboard closes the keyboard
@@ -61,16 +73,5 @@
     //Resign the first responder for eventTextField. The keyboard in this case
     [eventTextField resignFirstResponder];
 }
-
--(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    textField.text = @"";
-    
-    return true;
-}
-
-/*-(BOOL)textFieldShouldReturn:(UITextField *)textField {
-    
-    return true;
-}*/
 
 @end

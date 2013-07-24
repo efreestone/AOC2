@@ -41,7 +41,7 @@
 
 //EventSaved function to grab text field from eventDelegate and display in the main text view
 -(void)EventSaved: (NSString *)eventString {
-    eventsView.text = eventString;
+    eventsView.text = [NSString stringWithFormat: @"New Event: %@", eventString];
 }
 
 - (void)viewDidLoad
