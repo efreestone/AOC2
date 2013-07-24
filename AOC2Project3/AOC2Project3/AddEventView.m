@@ -38,9 +38,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-//onClose function to close second view (AddEventView)
--(IBAction)onClose:(id)sender {
+//onClose function to save event and close second view
+-(IBAction)saveEvent:(id)sender {
     [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
+//closeKeyboard closes the keyboard
+-(IBAction)closeKeyboard:(id)sender {
+    //NSLog(@"Close Keyboard pressed");
+    [eventTextField resignFirstResponder];
 }
 
 @end

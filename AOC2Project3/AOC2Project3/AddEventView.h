@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface AddEventView : UIViewController
+{
+    IBOutlet UITextField *eventTextField;
+}
 
 //Declare onClose for closing second view
--(IBAction)onClose:(id)sender;
+-(IBAction)saveEvent:(id)sender;
+
+//Declare close keyboard function
+-(IBAction)closeKeyboard:(id)sender;
 
 @end
