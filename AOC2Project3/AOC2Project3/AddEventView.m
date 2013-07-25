@@ -60,7 +60,7 @@
         NSString *eventTextEntered = eventTextField.text;
         
         //Grab date from picker and format. Doesn't work correctly from within onDateChange for some reason
-        if (datePicker != nil) {
+        //if (datePicker != nil) { //Checking this makes default date null
             NSDate *eventDate = eventDatePicker.date;
             if (eventDate != nil) {
                 //Format date for display and cast into formattedDate
@@ -69,14 +69,15 @@
                     [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm:ss a"];
                     formattedDate = [dateFormatter stringFromDate:eventDate];
                 }
-                NSLog(@"date = %@", formattedDate);
-            }
+                //NSLog(@"date = %@", formattedDate);
+            //}
         }
+        //Create string to be displayed. \n \n at the end breaks to new line twice to provide one line gap between events
         newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@ \n \n" , eventTextEntered, formattedDate];
         if (eventDelegate != nil) {
             //Call to ViewController to save text field and date. Passed along via delegate
             [eventDelegate EventSaved:newEventDetails];
-            NSLog(@"%@", newEventDetails);
+            //NSLog(@"%@", newEventDetails);
         }
         //Close Add Event View and return to primary view
         [self dismissViewControllerAnimated:TRUE completion:nil];

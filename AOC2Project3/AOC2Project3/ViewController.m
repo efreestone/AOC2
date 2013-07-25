@@ -35,7 +35,7 @@
                 addEventView.eventDelegate = self;
                 [self presentViewController:addEventView animated:TRUE completion:nil];
             }
-        } //else
+        }
     }
 }
 
