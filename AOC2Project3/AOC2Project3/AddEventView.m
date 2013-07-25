@@ -55,9 +55,9 @@
 
 //saveEvent function to save event and close second view
 -(IBAction)saveEvent:(id)sender {
+    NSString *eventTextEntered = eventTextField.text;
     //Check that an event was entered in the text field
-    if (eventTextField.text.length > 0) {
-        NSString *eventTextEntered = eventTextField.text;
+    if (eventTextEntered.length > 0) {
         
         //Grab date from picker and format. Doesn't work correctly from within onDateChange for some reason
         //if (datePicker != nil) { //Checking this makes default date null
