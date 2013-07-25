@@ -13,18 +13,47 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventView : UIViewController
+@protocol AddEventViewDelegate <NSObject>
+
+//Custom delegate to save text field on second view
+@required
+-(void)EventSaved: (NSString *)eventDetails;
+
+@end
+
+@interface AddEventView : UIViewController <UITextFieldDelegate>
 {
     //Declare event text field
     IBOutlet UITextField *eventTextField;
     //Declare date picker
-    IBOutlet UIDatePicker *eventDate;
+    IBOutlet UIDatePicker *eventDatePicker;
+    //Declare event label to be used for displaying error message
+    IBOutlet UILabel *eventLabel;
+    
+    //Declare id for add event view delegate
+    id<AddEventViewDelegate> eventDelegate;
+    
+    //Declare formatted date
+    NSString *formattedDate;
+    //Declare full string with event text and date
+    NSString *newEventDetails;
+    
+    UIDatePicker *datePicker;
+    NSDate *currentDate;
 }
 
-//Declare onClose for closing second view
+//Declare onDateChange to grab date selected with picker
+-(IBAction)onDateChange:(id)sender;
+
+//Declare saveEvent for closing second view and saving input data
 -(IBAction)saveEvent:(id)sender;
 
 //Declare close keyboard function
 -(IBAction)closeKeyboard:(id)sender;
 
+//Allow to set delegate from outside
+@property (strong) id<AddEventViewDelegate> eventDelegate;
+
 @end
+
+

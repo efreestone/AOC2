@@ -32,10 +32,28 @@
             //NSLog(@"Add Event Button clicked");
             AddEventView *addEventView = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
             if (addEventView != nil) {
+                addEventView.eventDelegate = self;
                 [self presentViewController:addEventView animated:TRUE completion:nil];
             }
-        } //else
+        }
     }
+}
+
+//EventSaved function to grab text field from eventDelegate and display in the main text view
+-(void)EventSaved: (NSString *)eventDetails {
+    if ([eventsView.text isEqualToString:@"Events will go here."]) {
+        eventsView.text = @"";
+        eventsView.text = eventDetails;
+    } else {
+        eventsView.text = [eventsView.text stringByAppendingString:eventDetails];
+    }
+    
+    
+    /*if([events.text isEqualToString:@""]){
+     events.text = eventDetails;
+     }else{
+     events.text = [events.text stringByAppendingString:stringDetails];
+     }*/
 }
 
 - (void)viewDidLoad
