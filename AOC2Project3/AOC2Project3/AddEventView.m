@@ -72,7 +72,7 @@
                 NSLog(@"date = %@", formattedDate);
             }
         }
-        newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@" , eventTextEntered, formattedDate];
+        newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@ \n \n" , eventTextEntered, formattedDate];
         if (eventDelegate != nil) {
             //Call to ViewController to save text field and date. Passed along via delegate
             [eventDelegate EventSaved:newEventDetails];
