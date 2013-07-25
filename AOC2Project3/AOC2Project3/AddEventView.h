@@ -26,13 +26,16 @@
     //Declare event text field
     IBOutlet UITextField *eventTextField;
     //Declare date picker
-    IBOutlet UIDatePicker *eventDate;
+    IBOutlet UIDatePicker *eventDatePicker;
     //Declare event label to be used for displaying error message
     IBOutlet UILabel *eventLabel;
     
     //Declare id for add event view delegate
     id<AddEventViewDelegate> eventDelegate;
 }
+
+//Declare onDateChange to grab date selected with picker
+-(IBAction)onDateChange:(id)sender;
 
 //Declare saveEvent for closing second view and saving input data
 -(IBAction)saveEvent:(id)sender;

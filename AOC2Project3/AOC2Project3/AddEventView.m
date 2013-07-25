@@ -44,15 +44,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onDateChange:(id)sender {
+    //Cast date picker
+    UIDatePicker *datePicker = (UIDatePicker *)sender;
+    if (datePicker != nil) {
+        NSDate *eventDate = datePicker.date;
+        NSLog(@"date = %@", eventDate);
+    }
+}
+
 //saveEvent function to save event and close second view
 -(IBAction)saveEvent:(id)sender {
     //Check that an event was entered in the text field
     if (eventTextField.text.length > 0) {
-        UIDatePicker *datePicker = (UIDatePicker *)sender;
-        if (datePicker != nil) {
-            
-        }
-        
         if (eventDelegate != nil) {
             //Call to ViewController to save text field
             [eventDelegate EventSaved:eventTextField.text];
