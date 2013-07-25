@@ -17,7 +17,7 @@
 
 //Custom delegate to save text field on second view
 @required
--(void)EventSaved: (NSString *)eventString;
+-(void)EventSaved: (NSString *)eventDetails;
 
 @end
 
@@ -32,6 +32,14 @@
     
     //Declare id for add event view delegate
     id<AddEventViewDelegate> eventDelegate;
+    
+    //Declare formatted date
+    NSString *formattedDate;
+    //Declare full string with event text and date
+    NSString *newEventDetails;
+    
+    UIDatePicker *datePicker;
+    NSDate *currentDate;
 }
 
 //Declare onDateChange to grab date selected with picker
@@ -43,6 +51,7 @@
 //Declare close keyboard function
 -(IBAction)closeKeyboard:(id)sender;
 
+//Allow to set delegate from outside
 @property (strong) id<AddEventViewDelegate> eventDelegate;
 
 @end

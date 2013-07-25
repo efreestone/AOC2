@@ -199,6 +199,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 						<object class="NSDate" key="IBUIDate">
 							<double key="NS.time">396327770.57692701</double>
 						</object>
+						<object class="NSDate" key="IBUIMinimumDate">
+							<double key="NS.time">-978267600</double>
+						</object>
 						<int key="IBUIMinuteInterval">15</int>
 					</object>
 					<object class="IBUILabel" id="729669107">
