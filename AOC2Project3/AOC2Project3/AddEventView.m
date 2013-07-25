@@ -51,22 +51,6 @@
     //Set minimum date to current date
     currentDate = [NSDate date];
     [datePicker setMinimumDate: currentDate];
-    
-    /*if (datePicker != nil) {
-        NSDate *eventDate = datePicker.date;
-        
-        if (eventDate != nil) {
-            //Format date for display and cast into formattedDate
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            if (dateFormatter != nil) {
-                [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss a"];
-                formattedDate = [dateFormatter stringFromDate:eventDate];
-                //Call to ViewController to save date from picker
-                //[eventDelegate EventSaved:formattedDate];
-            }
-            NSLog(@"date = %@", formattedDate);
-        }
-    }*/
 }
 
 //saveEvent function to save event and close second view
@@ -74,35 +58,23 @@
     //Check that an event was entered in the text field
     if (eventTextField.text.length > 0) {
         NSString *eventTextEntered = eventTextField.text;
-        //NSString *eventDateEntered = datePicker.date;
         
+        //Grab date from picker and format. Doesn't work correctly from within onDateChange for some reason
         if (datePicker != nil) {
-            NSDate *eventDate = datePicker.date;
-            /*if (dateFormatter != nil) {
-             [dateFormatter setDateFormat:@"MMMM dd, yyyy hh:mm:ss a zzzz"];
-             NSString *formattedDate = [dateFormatter stringFromDate:currentDate];
-             //Create UIAlertView variable and inject NSString of current date
-             UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date & Time" message:formattedDate delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-             if (dateAlert != nil) {
-             [dateAlert show];
-             }
-             }*/
-            
+            NSDate *eventDate = eventDatePicker.date;
             if (eventDate != nil) {
                 //Format date for display and cast into formattedDate
                 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
                 if (dateFormatter != nil) {
-                    [dateFormatter setDateFormat:@"MM/dd/yyyy hh:mm:ss a"];
+                    [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm:ss a"];
                     formattedDate = [dateFormatter stringFromDate:eventDate];
-                    //Call to ViewController to save date from picker
-                    //[eventDelegate EventSaved:formattedDate];
                 }
                 NSLog(@"date = %@", formattedDate);
             }
         }
         newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@" , eventTextEntered, formattedDate];
         if (eventDelegate != nil) {
-            //Call to ViewController to save text field
+            //Call to ViewController to save text field and date. Passed along via delegate
             [eventDelegate EventSaved:newEventDetails];
             NSLog(@"%@", newEventDetails);
         }
