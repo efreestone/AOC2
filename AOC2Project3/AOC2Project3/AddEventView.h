@@ -37,9 +37,6 @@
     NSString *formattedDate;
     //Declare full string with event text and date
     NSString *newEventDetails;
-    
-    UIDatePicker *datePicker;
-    NSDate *currentDate;
 }
 
 //Declare onDateChange to grab date selected with picker

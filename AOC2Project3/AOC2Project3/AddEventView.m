@@ -47,29 +47,29 @@
 //onDateChange function to grab date from picker
 -(IBAction)onDateChange:(id)sender {
     //Cast date picker
-    datePicker = (UIDatePicker *)sender;
+    UIDatePicker *datePicker = (UIDatePicker *)sender;
     //Set minimum date to current date
-    currentDate = [NSDate date];
+    NSDate *currentDate = [NSDate date];
     [datePicker setMinimumDate: currentDate];
 }
 
 //saveEvent function to save event and close second view
 -(IBAction)saveEvent:(id)sender {
+    //Cast text field entry into NSString
+    NSString *eventTextEntered = eventTextField.text;
     //Check that an event was entered in the text field
-    if (eventTextField.text.length > 0) {
-        NSString *eventTextEntered = eventTextField.text;
-        
-        //Grab date from picker and format. Doesn't work correctly from within onDateChange for some reason
+    if (eventTextEntered.length > 0) {
+        //Grab date from picker and format. Doesn't work correctly from within onDateChange, especially if no date picked
         //if (datePicker != nil) { //Checking this makes default date null
-            NSDate *eventDate = eventDatePicker.date;
-            if (eventDate != nil) {
-                //Format date for display and cast into formattedDate
-                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-                if (dateFormatter != nil) {
-                    [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm:ss a"];
-                    formattedDate = [dateFormatter stringFromDate:eventDate];
-                }
-                //NSLog(@"date = %@", formattedDate);
+        NSDate *eventDate = eventDatePicker.date;
+        if (eventDate != nil) {
+            //Format date for display and cast into formattedDate
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            if (dateFormatter != nil) {
+                [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm:ss a"];
+                formattedDate = [dateFormatter stringFromDate:eventDate];
+            }
+            //NSLog(@"date = %@", formattedDate);
             //}
         }
         //Create string to be displayed. \n \n at the end breaks to new line twice to provide one line gap between events
@@ -82,7 +82,7 @@
         //Close Add Event View and return to primary view
         [self dismissViewControllerAnimated:TRUE completion:nil];
     } else {
-        //Provide alert that event description is required
+        //Provide alert that event description is required. Changes text of "Event Description"
         eventLabel.text = @"Please enter an event";
         eventLabel.textColor = [UIColor redColor];
     }

@@ -17,8 +17,6 @@
 
 @interface ViewController : UIViewController <AddEventViewDelegate>
 {
-    //Declare "Date Planner" label
-    UILabel *datePlannerLabel;
     //Declare "Add Event" button
     IBOutlet UIButton *addEventBtn;
     //Declare text view
