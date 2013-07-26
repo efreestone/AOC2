@@ -47,9 +47,9 @@
 //onDateChange function to grab date from picker
 -(IBAction)onDateChange:(id)sender {
     //Cast date picker
-    datePicker = (UIDatePicker *)sender;
+    UIDatePicker *datePicker = (UIDatePicker *)sender;
     //Set minimum date to current date
-    currentDate = [NSDate date];
+    NSDate *currentDate = [NSDate date];
     [datePicker setMinimumDate: currentDate];
 }
 
@@ -59,7 +59,7 @@
     NSString *eventTextEntered = eventTextField.text;
     //Check that an event was entered in the text field
     if (eventTextEntered.length > 0) {
-        //Grab date from picker and format. Doesn't work correctly from within onDateChange for some reason
+        //Grab date from picker and format. Doesn't work correctly from within onDateChange, especially if no date picked
         //if (datePicker != nil) { //Checking this makes default date null
         NSDate *eventDate = eventDatePicker.date;
         if (eventDate != nil) {
@@ -82,7 +82,7 @@
         //Close Add Event View and return to primary view
         [self dismissViewControllerAnimated:TRUE completion:nil];
     } else {
-        //Provide alert that event description is required
+        //Provide alert that event description is required. Changes text of "Event Description"
         eventLabel.text = @"Please enter an event";
         eventLabel.textColor = [UIColor redColor];
     }

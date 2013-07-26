@@ -32,7 +32,9 @@
             //NSLog(@"Add Event Button clicked");
             AddEventView *addEventView = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
             if (addEventView != nil) {
+                //Set eventDelegate to self
                 addEventView.eventDelegate = self;
+                //Slide second view in
                 [self presentViewController:addEventView animated:TRUE completion:nil];
             }
         }
@@ -42,18 +44,13 @@
 //EventSaved function to grab text field from eventDelegate and display in the main text view
 -(void)EventSaved: (NSString *)eventDetails {
     if ([eventsView.text isEqualToString:@"Events will go here."]) {
+        //Clear out default text
         eventsView.text = @"";
         eventsView.text = eventDetails;
     } else {
+        //If events exist, append new event without clearing anything out of the text view
         eventsView.text = [eventsView.text stringByAppendingString:eventDetails];
     }
-    
-    
-    /*if([events.text isEqualToString:@""]){
-     events.text = eventDetails;
-     }else{
-     events.text = [events.text stringByAppendingString:stringDetails];
-     }*/
 }
 
 - (void)viewDidLoad
