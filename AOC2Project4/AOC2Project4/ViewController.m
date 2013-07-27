@@ -1,3 +1,8 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 3
+// July 22nd, 2013
+
 //
 //  ViewController.m
 //  AOC2Project4
