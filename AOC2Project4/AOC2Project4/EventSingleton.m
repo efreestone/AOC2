@@ -1,7 +1,7 @@
 // Elijah Freestone
 // AOC2 1307
-// Project 3
-// July 22nd, 2013
+// Project 4
+// July 27nd, 2013
 
 //
 //  EventSingleton.m
