@@ -44,6 +44,9 @@
     NSString *newEventDetails;
 }
 
+//Declare onSwipe function
+-(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer;
+
 //Declare onDateChange to grab date selected with picker
 -(IBAction)onDateChange:(id)sender;
 

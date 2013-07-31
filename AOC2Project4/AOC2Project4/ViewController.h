@@ -24,4 +24,7 @@
     UISwipeGestureRecognizer *rightSwipe;
 }
 
+//Declare onSwipe function
+-(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer;
+
 @end

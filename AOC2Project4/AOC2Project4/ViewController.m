@@ -12,6 +12,8 @@
 //
 
 #import "ViewController.h"
+//Import second view controller (AddEventView)
+#import "AddEventView.h"
 //Import EventSingleton
 #import "EventSingleton.h"
 
@@ -23,9 +25,12 @@
 
 - (void)viewDidLoad
 {
-    //Call instance of static singleton method
-    /*EventSingleton *eventSingleton = [EventSingleton GetInstance];
-    [eventSingleton displayEvents];*/
+    //Cast right swipe and allocate
+    rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action: @selector(onSwipe:)];
+    //Hook in direction of swipe
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    //Add gesture recognizer to label
+    [rightSwipeLabel addGestureRecognizer:rightSwipe];
     
     //Call instance of singleton (Lazy initialization, singleton doesn't get created until displayEvent is called)
     [[EventSingleton GetInstance] displayEvents];
@@ -38,6 +43,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//onSwipe function to grab swipe and change view to add event
+-(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer {
+    if (swipeRecognizer.direction == UISwipeGestureRecognizerDirectionRight) {
+        AddEventView *addEventView = [[AddEventView alloc] initWithNibName:@"AddEventView" bundle:nil];
+        if (addEventView != nil) {
+            //Slide second view in
+            [self presentViewController:addEventView animated:TRUE completion:nil];
+        }
+    }
 }
 
 @end

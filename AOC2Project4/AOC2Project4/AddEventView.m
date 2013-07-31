@@ -25,8 +25,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        //Nil out custom delegate
-        eventDelegate = nil;
         // Custom initialization
     }
     return self;
@@ -34,6 +32,13 @@
 
 - (void)viewDidLoad
 {
+    //Cast right swipe and allocate
+    leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action: @selector(onSwipe:)];
+    //Hook in direction of swipe
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    //Add gesture recognizer to label
+    [leftSwipeLabel addGestureRecognizer:leftSwipe];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -42,6 +47,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//onSwipe function to grab swipe and change view to add event
+-(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer {
+    if (swipeRecognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        //Close Add Event View and return to primary view
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+    }
 }
 
 //onDateChange function to grab date from picker
