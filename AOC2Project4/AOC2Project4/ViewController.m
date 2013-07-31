@@ -27,7 +27,7 @@
     /*EventSingleton *eventSingleton = [EventSingleton GetInstance];
     [eventSingleton displayEvents];*/
     
-    //Call instance of singleton (Lazy Initializaion, singleton doesn't get created until displayEvent is called)
+    //Call instance of singleton (Lazy initialization, singleton doesn't get created until displayEvent is called)
     [[EventSingleton GetInstance] displayEvents];
     
     [super viewDidLoad];

@@ -1,18 +1,23 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 3
+// July 22nd, 2013
+
 //
-//  AddEventViewViewController.m
+//  AddEventView.m
 //  AOC2Project4
 //
 //  Created by Elijah Freestone on 7/31/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "AddEventViewViewController.h"
+#import "AddEventView.h"
 
-@interface AddEventViewViewController ()
+@interface AddEventView ()
 
 @end
 
-@implementation AddEventViewViewController
+@implementation AddEventView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

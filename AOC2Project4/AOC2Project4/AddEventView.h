@@ -1,5 +1,10 @@
+// Elijah Freestone
+// AOC2 1307
+// Project 3
+// July 22nd, 2013
+
 //
-//  AddEventViewViewController.h
+//  AddEventView.h
 //  AOC2Project4
 //
 //  Created by Elijah Freestone on 7/31/13.
@@ -8,6 +13,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewViewController : UIViewController
+@interface AddEventView : UIViewController
 
 @end

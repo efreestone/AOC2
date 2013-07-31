@@ -20,6 +20,8 @@
 		B8294CC817A437F50013B8DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8294CC717A437F50013B8DB /* ViewController.m */; };
 		B8294CCB17A437F50013B8DB /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8294CC917A437F50013B8DB /* ViewController_iPhone.xib */; };
 		B8294CCE17A437F50013B8DB /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8294CCC17A437F50013B8DB /* ViewController_iPad.xib */; };
+		B86718CB17A9ABED007BC408 /* AddEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = B86718C917A9ABED007BC408 /* AddEventView.m */; };
+		B86718CC17A9ABED007BC408 /* AddEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B86718CA17A9ABED007BC408 /* AddEventView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,9 @@
 		B8294CC717A437F50013B8DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8294CCA17A437F50013B8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B8294CCD17A437F50013B8DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B86718C817A9ABED007BC408 /* AddEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventView.h; sourceTree = "<group>"; };
+		B86718C917A9ABED007BC408 /* AddEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventView.m; sourceTree = "<group>"; };
+		B86718CA17A9ABED007BC408 /* AddEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +102,9 @@
 				B8294CB517A437F50013B8DB /* Supporting Files */,
 				B80DDF8917A8AD7B00E7B8B5 /* EventSingleton.h */,
 				B80DDF8A17A8AD7B00E7B8B5 /* EventSingleton.m */,
+				B86718C817A9ABED007BC408 /* AddEventView.h */,
+				B86718C917A9ABED007BC408 /* AddEventView.m */,
+				B86718CA17A9ABED007BC408 /* AddEventView.xib */,
 			);
 			path = AOC2Project4;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				B8294CC517A437F50013B8DB /* Default-568h@2x.png in Resources */,
 				B8294CCB17A437F50013B8DB /* ViewController_iPhone.xib in Resources */,
 				B8294CCE17A437F50013B8DB /* ViewController_iPad.xib in Resources */,
+				B86718CC17A9ABED007BC408 /* AddEventView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +195,7 @@
 				B8294CBF17A437F50013B8DB /* AppDelegate.m in Sources */,
 				B8294CC817A437F50013B8DB /* ViewController.m in Sources */,
 				B80DDF8B17A8AD7B00E7B8B5 /* EventSingleton.m in Sources */,
+				B86718CB17A9ABED007BC408 /* AddEventView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
