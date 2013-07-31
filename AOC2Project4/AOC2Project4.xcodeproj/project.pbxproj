@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80DDF8B17A8AD7B00E7B8B5 /* EventSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = B80DDF8A17A8AD7B00E7B8B5 /* EventSingleton.m */; };
 		B8294CAF17A437F50013B8DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8294CAE17A437F50013B8DB /* UIKit.framework */; };
 		B8294CB117A437F50013B8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8294CB017A437F50013B8DB /* Foundation.framework */; };
 		B8294CB317A437F50013B8DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8294CB217A437F50013B8DB /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80DDF8917A8AD7B00E7B8B5 /* EventSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSingleton.h; sourceTree = "<group>"; };
+		B80DDF8A17A8AD7B00E7B8B5 /* EventSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSingleton.m; sourceTree = "<group>"; };
 		B8294CAB17A437F50013B8DB /* AOC2Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOC2Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8294CAE17A437F50013B8DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B8294CB017A437F50013B8DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,8 @@
 				B8294CC917A437F50013B8DB /* ViewController_iPhone.xib */,
 				B8294CCC17A437F50013B8DB /* ViewController_iPad.xib */,
 				B8294CB517A437F50013B8DB /* Supporting Files */,
+				B80DDF8917A8AD7B00E7B8B5 /* EventSingleton.h */,
+				B80DDF8A17A8AD7B00E7B8B5 /* EventSingleton.m */,
 			);
 			path = AOC2Project4;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				B8294CBB17A437F50013B8DB /* main.m in Sources */,
 				B8294CBF17A437F50013B8DB /* AppDelegate.m in Sources */,
 				B8294CC817A437F50013B8DB /* ViewController.m in Sources */,
+				B80DDF8B17A8AD7B00E7B8B5 /* EventSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +316,7 @@
 				B8294CD317A437F50013B8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

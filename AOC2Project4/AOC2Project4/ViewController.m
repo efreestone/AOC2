@@ -12,6 +12,8 @@
 //
 
 #import "ViewController.h"
+//Import EventSingleton
+#import "EventSingleton.h"
 
 @interface ViewController ()
 
@@ -21,6 +23,13 @@
 
 - (void)viewDidLoad
 {
+    //Call instance of static singleton method
+    /*EventSingleton *eventSingleton = [EventSingleton GetInstance];
+    [eventSingleton displayEvents];*/
+    
+    //Call instance of singleton (Lazy Initializaion, singleton doesn't get created until displayEvent is called)
+    [[EventSingleton GetInstance] displayEvents];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

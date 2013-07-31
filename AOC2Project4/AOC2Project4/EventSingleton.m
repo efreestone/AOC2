@@ -10,4 +10,35 @@
 
 @implementation EventSingleton
 
+//Set static method for singleton instance
+static EventSingleton *_instance = nil;
+
+//Create singleton instance
++(EventSingleton *)GetInstance {
+    if (_instance == nil) {
+        //Allocate and initialize singleton
+        [[self alloc] init];
+        
+        return _instance;
+    }
+}
+
+-(id)alloc {
+    
+    _instance = [super alloc];
+    
+    return _instance;
+}
+
+-(id)init {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
+-(void)displayEvents {
+
+}
+
 @end

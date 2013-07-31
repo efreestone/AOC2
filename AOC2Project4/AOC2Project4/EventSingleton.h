@@ -10,4 +10,10 @@
 
 @interface EventSingleton : NSObject
 
+//Declare static method
++(EventSingleton *)GetInstance;
+
+//Declare instance method
+-(void)displayEvents;
+
 @end
