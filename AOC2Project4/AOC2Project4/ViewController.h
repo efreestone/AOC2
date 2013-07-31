@@ -14,5 +14,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    //Declare text view
+    IBOutlet UITextView *eventsView;
+    //Declare right swipe label
+    IBOutlet UILabel *rightSwipeLabel;
+    
+    //Declare swipe gesture recognizer
+    UISwipeGestureRecognizer *rightSwipe;
+}
 
 @end

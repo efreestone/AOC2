@@ -23,12 +23,17 @@
 
 @interface AddEventView : UIViewController <UITextFieldDelegate>
 {
+    //Declare left swipe label
+    IBOutlet UILabel *leftSwipeLabel;
     //Declare event text field
     IBOutlet UITextField *eventTextField;
     //Declare date picker
     IBOutlet UIDatePicker *eventDatePicker;
     //Declare event label to be used for displaying error message
     IBOutlet UILabel *eventLabel;
+    
+    //Declare swipe gesture recognizer
+    UISwipeGestureRecognizer *leftSwipe;
     
     //Declare id for add event view delegate
     id<AddEventViewDelegate> eventDelegate;
