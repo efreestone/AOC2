@@ -49,10 +49,18 @@
         NSLog(@"NSUserDefaults arent working");
     }
     
-    eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
+    //eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+//Added this based on a thread on stackOverflow. 
+-(void)viewWillAppear:(BOOL)animated
+{
+    eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
+    NSLog(@"viewWillAppear hit");
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,13 +98,14 @@
     NSLog(@"Event saved as default data");
     //Set event details as NSUserDefault to be displayed the next launch
     NSUserDefaults *defaultEvents = [NSUserDefaults standardUserDefaults];
-    if(defaultEvents != nil) {
+    if (defaultEvents != nil) {
+        //Set key of new event with NSMutableDictionary
         [defaultEvents setObject:eventsView.text forKey:@"event"];
         //Save event details to the device
         [defaultEvents synchronize];
         UIAlertView *saveSuccessful = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events will save upon exiting application." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [saveSuccessful show];
-    }else if (defaultEvents == nil){
+    } else {
         UIAlertView *noSave = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There are no events to be saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [noSave show];
     }
