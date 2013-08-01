@@ -17,6 +17,8 @@
 {
     //Declare save button
     IBOutlet UIButton *saveEventButton;
+    //Declare clear button
+    IBOutlet UIButton *clearEventsButton;
     //Declare text view
     IBOutlet UITextView *eventsView;
     //Declare right swipe label

@@ -33,8 +33,8 @@ static EventSingleton *_instance = nil;
     }
 }
 
-//This was - in singleton video. Changing to + removes warning but I'm not sure why yet
-+(id)alloc {
+//This was - in singleton video. Changing to + removes warning but I'm not sure why yet. Warning is 'NSObject' may not respond to 'alloc'
+-(id)alloc {
     
     _instance = [super alloc];
     
