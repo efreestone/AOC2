@@ -33,8 +33,8 @@ static EventSingleton *_instance = nil;
     }
 }
 
-//This was - in singleton video. Changing to + removes warning but I'm not sure why yet. Warning is 'NSObject' may not respond to 'alloc'
--(id)alloc {
+//This was - in singleton video. Changing to + removes warning but I'm not sure why yet. Warning is 'NSObject' may not respond to 'alloc'. It allocates fine either way
++(id)alloc {
     
     _instance = [super alloc];
     
@@ -46,10 +46,13 @@ static EventSingleton *_instance = nil;
     if (self = [super init]) {
         NSUserDefaults *defaultEvents = [NSUserDefaults standardUserDefaults];
         if ([defaultEvents objectForKey:@"event"] != nil) {
+            //if ([self.savedEventLoaded isEqualToString:@"Events will go here."]) {
+                //self.savedEventLoaded = @"";
+            //}
             self.savedEventLoaded = [defaultEvents objectForKey:@"event"];
             NSLog(@"Singleton init IF hit");
         } else {
-            self.savedEventLoaded = @"";
+            self.savedEventLoaded = @"Events will go here.";
             NSLog(@"Singleton init ELSE hit");
         }
     }
@@ -59,7 +62,8 @@ static EventSingleton *_instance = nil;
 //Instance method to give both views access to singleton
 -(void)displayEvents:(NSString *)newEventDetails {
     NSString *savedEvents = self.savedEventLoaded;
-    if ([savedEvents isEqual:@""]) {
+    if ([savedEvents isEqual:@"Events will go here."]) {
+        savedEventLoaded = @"";
         NSString *modifiedEvents = [NSString stringWithFormat:@"%@", newEventDetails];
         self.savedEventLoaded = modifiedEvents;
         NSLog(@"From inside displayEvent IF %@", modifiedEvents);

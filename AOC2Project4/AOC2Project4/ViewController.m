@@ -35,6 +35,7 @@
     //Call instance of singleton (Lazy initialization, singleton doesn't get created until displayEvent is called)
     //[[EventSingleton GetInstance] displayEvents];
     
+    //This is called in viewWillLoad to fix new events not displaying
     //eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
     
     // Check if default saved events exist
@@ -81,27 +82,12 @@
     }
 }
 
-//EventSaved function to grab text field from eventDelegate and display in the main text view
--(void)EventSaved: (NSString *)eventDetails {
-    if ([eventsView.text isEqualToString:@"Events will go here."]) {
-        //Clear out default text
-        eventsView.text = @"";
-        eventsView.text = eventDetails;
-        NSLog(@"EventSaved hit");
-    } else {
-        //If events exist, append new event without clearing anything out of the text view
-        eventsView.text = [eventsView.text stringByAppendingString:eventDetails];
-        NSLog(@"EventSaved hit");
-    }
-}
-
 -(IBAction)onClick:(id)sender {
     //Cast clear and save into a UIButton
     UIButton *buttonClicked = (UIButton *)sender;
-    
-    
-    
+        
     if (buttonClicked != nil) {
+        //Save button
         if (buttonClicked.tag == 0) {
             //Set event details as NSUserDefault to be displayed the next launch
             NSUserDefaults *defaultEvents = [NSUserDefaults standardUserDefaults];
@@ -110,17 +96,22 @@
                 [defaultEvents setObject:eventsView.text forKey:@"event"];
                 //Save event details to the device
                 [defaultEvents synchronize];
-                UIAlertView *saveSuccessful = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events will save upon exiting application." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                UIAlertView *saveSuccessful = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events will save after exiting the application." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [saveSuccessful show];
-                NSLog(@"Event saved as default data");
+                //NSLog(@"Event saved as default data");
             } else {
                 UIAlertView *noSave = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There are no events to be saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
                 [noSave show];
             }
+        //Clear button
         } else if (buttonClicked.tag == 1) {
             //Clear out all saved events from NSUserDefaults
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"event"];
-            //[EventSingleton GetInstance].savedEventLoaded = @"Events will go here.";
+            NSUserDefaults *currentDefaultEvents = [NSUserDefaults standardUserDefaults];
+            [currentDefaultEvents removeObjectForKey:@"event"];
+            //Make sure cleared NSUserDefaults is resaved
+            [currentDefaultEvents synchronize];
+            UIAlertView *clearSuccessful = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events will clear after exiting the application." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [clearSuccessful show];
             eventsView.text = @"Events will go here.";
         }
     }
