@@ -15,6 +15,8 @@
 
 @interface ViewController : UIViewController
 {
+    //Declare save button
+    IBOutlet UIButton *saveEventButton;
     //Declare text view
     IBOutlet UITextView *eventsView;
     //Declare right swipe label
@@ -23,6 +25,9 @@
     //Declare swipe gesture recognizer
     UISwipeGestureRecognizer *rightSwipe;
 }
+
+//Declare onClick function to add event to NSUserDefaults
+-(IBAction)onClick:(id)sender;
 
 //Declare onSwipe function
 -(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer;

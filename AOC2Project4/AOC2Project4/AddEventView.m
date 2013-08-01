@@ -12,6 +12,8 @@
 //
 
 #import "AddEventView.h"
+//Import singleton
+#import "EventSingleton.h"
 
 @interface AddEventView ()
 
@@ -19,7 +21,7 @@
 
 @implementation AddEventView
 
-@synthesize eventDelegate;
+//@synthesize eventDelegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,8 +54,39 @@
 //onSwipe function to grab swipe and change view to add event
 -(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer {
     if (swipeRecognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
+        NSLog(@"left swipe");
+        //Cast text field entry into NSString
+        NSString *eventTextEntered = eventTextField.text;
+        //Check that an event was entered in the text field
+        if (eventTextEntered.length > 0) {
+            //Grab date from picker and format. Doesn't work correctly from within onDateChange, especially if no date picked
+            NSDate *eventDate = eventDatePicker.date;
+            if (eventDate != nil) {
+                //Format date for display and cast into formattedDate
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                if (dateFormatter != nil) {
+                    [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm:ss a"];
+                    formattedDate = [dateFormatter stringFromDate:eventDate];
+                }
+                //NSLog(@"date = %@", formattedDate);
+            }
+            //Create string to be displayed. \n \n at the end breaks to new line twice to provide one line gap between events
+            newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@ \n \n" , eventTextEntered, formattedDate];
+            //if (eventDelegate != nil) {
+                //Call to ViewController to save text field and date. Passed along via singleton
+            [[EventSingleton GetInstance] displayEvents:newEventDetails];
+                //[eventDelegate EventSaved:newEventDetails];
+                NSLog(@"%@", newEventDetails);
+            //}
+            //Close Add Event View and return to primary view
+            [self dismissViewControllerAnimated:TRUE completion:nil];
+        } else {
+            //Provide alert that event description is required. Changes text of "Event Description"
+            eventLabel.text = @"Please enter an event";
+            eventLabel.textColor = [UIColor redColor];
+        }
         //Close Add Event View and return to primary view
-        [self dismissViewControllerAnimated:TRUE completion:nil];
+        //[self dismissViewControllerAnimated:TRUE completion:nil];
     }
 }
 
@@ -67,7 +100,7 @@
 }
 
 //saveEvent function to save event and close second view
--(IBAction)saveEvent:(id)sender {
+/*-(IBAction)saveEvent:(id)sender {
     //Cast text field entry into NSString
     NSString *eventTextEntered = eventTextField.text;
     //Check that an event was entered in the text field
@@ -87,11 +120,11 @@
         }
         //Create string to be displayed. \n \n at the end breaks to new line twice to provide one line gap between events
         newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@ \n \n" , eventTextEntered, formattedDate];
-        if (eventDelegate != nil) {
+        //if (eventDelegate != nil) {
             //Call to ViewController to save text field and date. Passed along via delegate
-            [eventDelegate EventSaved:newEventDetails];
+          //  [eventDelegate EventSaved:newEventDetails];
             //NSLog(@"%@", newEventDetails);
-        }
+        //}
         //Close Add Event View and return to primary view
         [self dismissViewControllerAnimated:TRUE completion:nil];
     } else {
@@ -99,7 +132,7 @@
         eventLabel.text = @"Please enter an event";
         eventLabel.textColor = [UIColor redColor];
     }
-}
+}*/
 
 //closeKeyboard closes the keyboard
 -(IBAction)closeKeyboard:(id)sender {
