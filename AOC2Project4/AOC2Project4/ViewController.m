@@ -44,9 +44,9 @@
     NSUserDefaults *defaultEvents = [NSUserDefaults standardUserDefaults];
     if([defaultEvents objectForKey:@"event"] != nil) {
         eventsView.text = [defaultEvents objectForKey:@"event"];
-        NSLog(@"NSUserDefaults are working.");
+        NSLog(@"NSUserDefaults are working. %@", defaultEvents);
     } else {
-        NSLog(@"NSUserDefaults arent working");
+        NSLog(@"NSUserDefaults arent working. %@", defaultEvents);
     }
     
     //eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
@@ -105,6 +105,7 @@
         [defaultEvents synchronize];
         UIAlertView *saveSuccessful = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events will save upon exiting application." delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [saveSuccessful show];
+        NSLog(@"From onClick. %@", defaultEvents);
     } else {
         UIAlertView *noSave = [[UIAlertView alloc] initWithTitle:@"Error" message:@"There are no events to be saved" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [noSave show];

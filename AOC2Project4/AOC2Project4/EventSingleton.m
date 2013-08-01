@@ -59,12 +59,12 @@ static EventSingleton *_instance = nil;
 //Instance method to give both views access to singleton
 -(void)displayEvents:(NSString *)newEventDetails {
     NSString *savedEvents = self.savedEventLoaded;
-    if ([savedEvents isEqualToString:@""]) {
-        NSString *modifiedEvents = [savedEvents stringByAppendingFormat:@"%@", newEventDetails];
+    if ([savedEvents isEqual:@""]) {
+        NSString *modifiedEvents = [NSString stringWithFormat:@"%@", newEventDetails];
         self.savedEventLoaded = modifiedEvents;
         NSLog(@"From inside displayEvent IF %@", modifiedEvents);
     } else {
-        NSString *modifiedEvents = [NSString stringWithFormat:@"%@", newEventDetails];
+        NSString *modifiedEvents = [savedEvents stringByAppendingFormat:@"%@", newEventDetails];
         self.savedEventLoaded = modifiedEvents;
         NSLog(@"From inside displayEvent ELSE %@", modifiedEvents);
     }
