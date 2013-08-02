@@ -14,11 +14,18 @@
 #import <Foundation/Foundation.h>
 
 @interface EventSingleton : NSObject
+{
+    //Declare NSString to save event info in
+    NSString *savedEventLoaded;
+}
+
+//Allow this to be set from outside EventSingleton
+@property(nonatomic, strong) NSString *savedEventLoaded;
 
 //Declare static method
 +(EventSingleton *)GetInstance;
 
 //Declare instance method
--(void)displayEvents;
+-(void)displayEvents:(NSString *)newEventDetails;
 
 @end
