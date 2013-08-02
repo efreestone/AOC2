@@ -52,7 +52,6 @@
 //onSwipe function to grab swipe and change view to add event
 -(void)onSwipe:(UISwipeGestureRecognizer *)swipeRecognizer {
     if (swipeRecognizer.direction == UISwipeGestureRecognizerDirectionLeft) {
-        NSLog(@"left swipe");
         //Cast text field entry into NSString
         NSString *eventTextEntered = eventTextField.text;
         //Check that an event was entered in the text field
@@ -72,7 +71,7 @@
             newEventDetails = [NSString stringWithFormat:@"New Event: %@ \n %@ \n \n" , eventTextEntered, formattedDate];
             //Call to ViewController to save text field and date. Passed along via singleton
             [[EventSingleton GetInstance] displayEvents:newEventDetails];
-                NSLog(@"%@", newEventDetails);
+            //NSLog(@"%@", newEventDetails);
             //Close Add Event View and return to primary view
             [self dismissViewControllerAnimated:TRUE completion:nil];
         } else {
@@ -80,8 +79,6 @@
             eventLabel.text = @"Please enter an event";
             eventLabel.textColor = [UIColor redColor];
         }
-        //Close Add Event View and return to primary view
-        //[self dismissViewControllerAnimated:TRUE completion:nil];
     }
 }
 

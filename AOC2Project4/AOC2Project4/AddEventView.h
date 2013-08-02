@@ -13,15 +13,7 @@
 
 #import <UIKit/UIKit.h>
 
-//@protocol AddEventViewDelegate <NSObject>
-
-//Custom delegate to save text field on second view
-//@required
-//-(void)EventSaved: (NSString *)eventDetails;
-
-//@end
-
-@interface AddEventView : UIViewController //<UITextFieldDelegate>
+@interface AddEventView : UIViewController
 {
     //Declare left swipe label
     IBOutlet UILabel *leftSwipeLabel;
@@ -50,14 +42,8 @@
 //Declare onDateChange to grab date selected with picker
 -(IBAction)onDateChange:(id)sender;
 
-//Declare saveEvent for closing second view and saving input data
-//-(IBAction)saveEvent:(id)sender;
-
 //Declare close keyboard function
 -(IBAction)closeKeyboard:(id)sender;
-
-//Allow to set delegate from outside
-//@property (strong) id<AddEventViewDelegate> eventDelegate;
 
 @end
 

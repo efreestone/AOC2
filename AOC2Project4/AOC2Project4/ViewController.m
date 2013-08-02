@@ -32,9 +32,6 @@
     //Add gesture recognizer to label
     [rightSwipeLabel addGestureRecognizer:rightSwipe];
     
-    //Call instance of singleton (Lazy initialization, singleton doesn't get created until displayEvent is called)
-    //[[EventSingleton GetInstance] displayEvents];
-    
     //This is called in viewWillLoad to fix new events not displaying
     //eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
     
@@ -42,10 +39,10 @@
     NSUserDefaults *defaultEvents = [NSUserDefaults standardUserDefaults];
     if([defaultEvents objectForKey:@"event"] != nil) {
         eventsView.text = [defaultEvents objectForKey:@"event"];
-        NSLog(@"NSUserDefaults are working. %@", defaultEvents);
+        //NSLog(@"NSUserDefaults are working. %@", defaultEvents);
     } else {
         eventsView.text = @"Events will go here.";
-        NSLog(@"NSUserDefaults arent working. %@", defaultEvents);
+        //NSLog(@"NSUserDefaults arent working. %@", defaultEvents);
     }
     
     [super viewDidLoad];
@@ -55,12 +52,7 @@
 //Added this based on a thread on stackOverflow. Adds event details just entered to eventView 
 -(void)viewWillAppear:(BOOL)animated
 {
-    //if (![[EventSingleton GetInstance].savedEventLoaded isEqual: @""]) {
-        //eventsView.text = @"Events will go here.";
-    //} else {
-        eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
-        //NSLog(@"viewWillAppear hit");
-    //}
+    eventsView.text = [EventSingleton GetInstance].savedEventLoaded;
     
     [super viewWillAppear:animated];
 }
